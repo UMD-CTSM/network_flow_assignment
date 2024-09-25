@@ -1,0 +1,5 @@
+name: network_flow_assignment
+channels:
+  - conda-forge
+  - nodefaults
+prefix: /home/nathanczh/miniconda3/envs/network_flow_assignment
