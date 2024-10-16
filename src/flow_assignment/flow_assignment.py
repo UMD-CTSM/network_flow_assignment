@@ -1,13 +1,12 @@
+from dataclasses import dataclass
+
 import networkx as nx
 import pandas as pd
-import os
-import typing
 from pathlib import Path
 
+@dataclass
 class FlowAssignment:
-  def __init__(self, sum_column : str = None) -> None:
-    self.SUM_COLUMN = sum_column
-
+  SUM_COLUMN : str
   def assign_segments(self, railnet : nx.Graph) -> pd.DataFrame:
     shortest_paths = nx.all_pairs_shortest_path(railnet)
     path_segment_list = []
@@ -37,19 +36,20 @@ class FlowAssignment:
   def merge_segments_flows(self, path_segments : pd.DataFrame, faf_flows_by_pair : pd.DataFrame) -> pd.DataFrame:
     path_segments_w_traffic = path_segments.copy()
     path_segments_w_traffic = path_segments.join(faf_flows_by_pair)
-    segment_traffic = path_segments_w_traffic.groupby(['seg_start', 'seg_end']).agg('sum')
+    segment_traffic = path_segments_w_traffic.groupby(['seg_start', 'seg_end']).agg({self.SUM_COLUMN + '_sum':['sum']})
     return segment_traffic
 
   def apply_flows(self, railnet : nx.Graph, segment_traffic : pd.DataFrame) -> nx.Graph:
     for (start, end), traffic in segment_traffic.iterrows():
-      railnet.edges[(str(start), str(end))]['weight'] = float(traffic[self.SUM_COLUMN + '_sum'])
+      railnet.edges[(start, end)]['weight'] = float(traffic[self.SUM_COLUMN + '_sum']['sum'])
     return railnet
 
   def run(self, railnet, input_flows : pd.DataFrame):
-    path_segments = fa.assign_segments(railnet)
-    faf_flows_by_pair = fa.faf_flows_to_df(input_flows)
-    segment_traffic = fa.merge_segments_flows(path_segments, faf_flows_by_pair)
-    railnet = fa.apply_flows(railnet, segment_traffic)
+    path_segments = self.assign_segments(railnet)
+    faf_flows_by_pair = self.faf_flows_to_df(input_flows)
+    segment_traffic = self.merge_segments_flows(path_segments, faf_flows_by_pair)
+
+    railnet = self.apply_flows(railnet, segment_traffic)
     return railnet
 
 if __name__ == "__main__":
@@ -65,7 +65,7 @@ if __name__ == "__main__":
   # Read arguments from command line
   args = parser.parse_args()
 
-  fa = FlowAssignment(args.sum_column)
+  fa = FlowAssignment(SUM_COLUMN=args.sum_column)
   nx.write_gml(fa.run(
     nx.read_gml(Path.cwd() / args.input_graph),
     pd.read_csv(Path.cwd() / args.input_flows)

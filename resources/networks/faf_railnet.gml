@@ -1,2333 +1,2180 @@
 graph [
   node [
     id 0
-    label "361"
-    faf_id 361
-    name "Albany-Schenectady, NY  CFS Area"
-    lat 43.1061353
-    lon -73.8553872
+    label "11"
+    faf_id 11
+    y 33.475114495845354
+    x -86.76365478038123
   ]
   node [
     id 1
-    label "131"
-    faf_id 131
-    name "Atlanta-Athens-Clarke County-Sandy Springs, GA  CFS Area"
-    lat 33.0744605
-    lon -84.1467208
+    label "12"
+    faf_id 12
+    y 30.726019525262178
+    x -88.0625079556284
   ]
   node [
     id 2
-    label "481"
-    faf_id 481
-    name "Austin-Round Rock, TX  CFS Area"
-    lat 29.8323986
-    lon -97.628141
+    label "19"
+    faf_id 19
+    y 33.04772208813411
+    x -86.78007879033737
   ]
   node [
     id 3
-    label "241"
-    faf_id 241
-    name "Baltimore-Columbia-Towson, MD  CFS Area"
-    lat 39.3000324
-    lon -76.6104761
+    label "41"
+    faf_id 41
+    y 33.29306104328493
+    x -112.05832682035674
   ]
   node [
     id 4
-    label "221"
-    faf_id 221
-    name "Baton Rouge, LA  CFS Area"
-    lat 30.8397837
-    lon -91.0434338
+    label "42"
+    faf_id 42
+    y 32.130261361512346
+    x -111.3362301643624
   ]
   node [
     id 5
-    label "482"
-    faf_id 482
-    name "Beaumont-Port Arthur, TX  CFS Area"
-    lat 30.1223229
-    lon -93.8940999
+    label "49"
+    faf_id 49
+    y 34.18632405090192
+    x -111.66321967957592
   ]
   node [
     id 6
-    label "11"
-    faf_id 11
-    name "Birmingham-Hoover-Talladega, AL  CFS Area"
-    lat 33.9773575
-    lon -86.56644
+    label "50"
+    faf_id 50
+    y 34.584381418588706
+    x -92.36661976541511
   ]
   node [
     id 7
-    label "251"
-    faf_id 251
-    name "Boston-Worcester-Providence, MA-RI-NH-CT  CFS Area (MA Part)"
-    lat 42.3385513
-    lon -71.018253
+    label "61"
+    faf_id 61
+    y 34.026097614161046
+    x -117.94899653120507
   ]
   node [
     id 8
-    label "331"
-    faf_id 331
-    name "Boston-Worcester-Providence, MA-RI-NH-CT  CFS Area (NH Part)"
-    lat 43.2995786
-    lon -71.6800412
+    label "62"
+    faf_id 62
+    y 38.711388025025954
+    x -121.3437789301211
   ]
   node [
     id 9
-    label "441"
-    faf_id 441
-    name "Boston-Worcester-Providence, MA-RI-NH-CT  CFS Area (RI Part)"
-    lat 41.4009815
-    lon -71.6175979
+    label "63"
+    faf_id 63
+    y 32.89749471653081
+    x -117.16949154982049
   ]
   node [
     id 10
-    label "362"
-    faf_id 362
-    name "Buffalo-Cheektowaga, NY  CFS Area"
-    lat 42.752759
-    lon -78.7781922
+    label "64"
+    faf_id 64
+    y 37.83619301020791
+    x -121.91964635409418
   ]
   node [
     id 11
-    label "451"
-    faf_id 451
-    name "Charleston-North Charleston, SC  CFS Area"
-    lat 33.0821859
-    lon -80.4046966
+    label "65"
+    faf_id 65
+    y 36.711023520951926
+    x -119.85895780582794
   ]
   node [
     id 12
-    label "371"
-    faf_id 371
-    name "Charlotte-Concord, NC-SC  CFS Area  (NC Part)"
-    lat 35.4884913
-    lon -81.2268916
+    label "69"
+    faf_id 69
+    y 37.141658767085346
+    x -120.22528636761032
   ]
   node [
     id 13
-    label "171"
-    faf_id 171
-    name "Chicago-Naperville, IL-IN-WI  CFS Area (IL Part)"
-    lat 41.4013043
-    lon -89.5283772
+    label "81"
+    faf_id 81
+    y 39.93650927918099
+    x -104.93709632242177
   ]
   node [
     id 14
-    label "181"
-    faf_id 181
-    name "Chicago-Naperville, IL-IN-WI  CFS Area (IN Part)"
-    lat 41.0176883
-    lon -87.1188137
+    label "89"
+    faf_id 89
+    y 38.90081437661957
+    x -105.35213440903212
   ]
   node [
     id 15
-    label "211"
-    faf_id 211
-    name "Cincinnati-Wilmington-Maysville, OH-KY-IN  CFS Area (KY Part)"
-    lat 38.7601027
-    lon -84.8621525
+    label "91"
+    faf_id 91
+    y 41.730357831596535
+    x -72.66841139403913
   ]
   node [
     id 16
-    label "391"
-    faf_id 391
-    name "Cincinnati-Wilmington-Maysville, OH-KY-IN  CFS Area (OH Part)"
-    lat 39.4397469
-    lon -84.5657341
+    label "92"
+    faf_id 92
+    y 41.378464252546515
+    x -73.09981373797798
   ]
   node [
     id 17
-    label "392"
-    faf_id 392
-    name "Cleveland-Akron-Canton, OH  CFS Area"
-    lat 41.9241163
-    lon -81.3926429
+    label "99"
+    faf_id 99
+    y 41.580401296592164
+    x -72.0541596115179
   ]
   node [
     id 18
-    label "393"
-    faf_id 393
-    name "Columbus-Marion-Zanesville, OH  CFS Area"
-    lat 39.5552462
-    lon -83.4618927
+    label "101"
+    faf_id 101
+    y 39.574257611332726
+    x -75.60106322975986
   ]
   node [
     id 19
-    label "483"
-    faf_id 483
-    name "Corpus Christi-Kingsville-Alice, TX  CFS Area"
-    lat 28.1042254
-    lon -96.977983
+    label "109"
+    faf_id 109
+    y 38.64902511318634
+    x -75.42917854427095
   ]
   node [
     id 20
-    label "484"
-    faf_id 484
-    name "Dallas-Fort Worth, TX-OK  CFS Area (TX Part)"
-    lat 33.5911611
-    lon -96.1049882
+    label "111"
+    faf_id 111
+    y 38.90665586227974
+    x -76.99036886128904
   ]
   node [
     id 21
-    label "394"
-    faf_id 394
-    name "Dayton-Springfield-Sidney, OH  CFS Area"
-    lat 40.1327753
-    lon -83.7676037
+    label "121"
+    faf_id 121
+    y 30.273623672292626
+    x -81.70036831564367
   ]
   node [
     id 22
-    label "81"
-    faf_id 81
-    name "Denver-Aurora, CO  CFS Area"
-    lat 39.1189141
-    lon -105.7176479
+    label "122"
+    faf_id 122
+    y 26.369428370016465
+    x -80.31814730743021
   ]
   node [
     id 23
-    label "261"
-    faf_id 261
-    name "Detroit-Warren-Ann Arbor, MI  CFS Area"
-    lat 42.2846636
-    lon -83.2619533
+    label "123"
+    faf_id 123
+    y 28.695564576252885
+    x -81.39462759387436
   ]
   node [
     id 24
-    label "485"
-    faf_id 485
-    name "El Paso-Las Cruces, TX-NM  CFS Area (TX Part)"
-    lat 31.4508678
-    lon -105.3775489
+    label "124"
+    faf_id 124
+    y 27.97607224884005
+    x -82.38840899896638
   ]
   node [
     id 25
-    label "183"
-    faf_id 183
-    name "Fort Wayne-Huntington-Auburn, IN  CFS Area"
-    lat 41.643467
-    lon -85.0024051
+    label "129"
+    faf_id 129
+    y 28.98476675319171
+    x -83.22862260221224
   ]
   node [
     id 26
-    label "65"
-    faf_id 65
-    name "Fresno-Madera, CA  CFS Area"
-    lat 36.7610058
-    lon -119.6550193
+    label "131"
+    faf_id 131
+    y 33.79938375022301
+    x -84.37137750851997
   ]
   node [
     id 27
-    label "262"
-    faf_id 262
-    name "Grand Rapids-Wyoming-Muskegon, MI  CFS Area"
-    lat 42.9424607
-    lon -86.6549462
+    label "132"
+    faf_id 132
+    y 32.09098033662591
+    x -81.21628825110079
   ]
   node [
     id 28
-    label "372"
-    faf_id 372
-    name "Greensboro--Winston-Salem--High Point, NC  CFS Area"
-    lat 36.0439535
-    lon -79.4005733
+    label "139"
+    faf_id 139
+    y 32.29881072836101
+    x -83.38875799930754
   ]
   node [
     id 29
-    label "452"
-    faf_id 452
-    name "Greenville-Spartanburg-Anderson, SC  CFS Area"
-    lat 34.1557959
-    lon -82.1278759
+    label "160"
+    faf_id 160
+    y 43.959611100373955
+    x -114.45778204747178
   ]
   node [
     id 30
-    label "91"
-    faf_id 91
-    name "Hartford-West Hartford-East Hartford, CT  CFS Area"
-    lat 41.4330028
-    lon -72.5227802
+    label "171"
+    faf_id 171
+    y 41.72602208998174
+    x -87.94073050975209
   ]
   node [
     id 31
-    label "486"
-    faf_id 486
-    name "Houston-The Woodlands, TX  CFS Area"
-    lat 29.5266017
-    lon -95.7710149
+    label "172"
+    faf_id 172
+    y 38.69945895780858
+    x -89.98525077217874
   ]
   node [
     id 32
-    label "182"
-    faf_id 182
-    name "Indianapolis-Carmel-Muncie, IN  CFS Area"
-    lat 40.0536499
-    lon -86.0217262
+    label "179"
+    faf_id 179
+    y 40.04299014806549
+    x -89.2112122610259
   ]
   node [
     id 33
-    label "121"
-    faf_id 121
-    name "Jacksonville-St. Marys-Palatka, FL-GA  CFS Area (FL Part)"
-    lat 29.8906441
-    lon -81.3839483
+    label "181"
+    faf_id 181
+    y 41.576739480625285
+    x -87.26628164024795
   ]
   node [
     id 34
-    label "201"
-    faf_id 201
-    name "Kansas City-Overland Park-Kansas City, MO-KS  CFS Area (KS Part)"
-    lat 39.7885021
-    lon -95.1472253
+    label "182"
+    faf_id 182
+    y 39.80746094649371
+    x -86.07545185549311
   ]
   node [
     id 35
-    label "291"
-    faf_id 291
-    name "Kansas City-Overland Park-Kansas City, MO-KS  CFS Area (MO Part)"
-    lat 38.741528
-    lon -93.8118634
+    label "183"
+    faf_id 183
+    y 41.13019410870172
+    x -85.12865325809543
   ]
   node [
     id 36
-    label "473"
-    faf_id 473
-    name "Knoxville-Morristown-Sevierville, TN  CFS Area"
-    lat 36.138697
-    lon -84.6392616
+    label "189"
+    faf_id 189
+    y 39.556427085080344
+    x -86.56845175212396
   ]
   node [
     id 37
-    label "222"
-    faf_id 222
-    name "Lake Charles-Jennings, LA  CFS Area"
-    lat 30.2295588
-    lon -93.3580154
+    label "190"
+    faf_id 190
+    y 42.00806469299527
+    x -93.23167682376845
   ]
   node [
     id 38
-    label "487"
-    faf_id 487
-    name "Laredo, TX   CFS Area"
-    lat 27.7607987
-    lon -99.3407518
+    label "201"
+    faf_id 201
+    y 39.03319802200732
+    x -94.82227697150947
   ]
   node [
     id 39
-    label "321"
-    faf_id 321
-    name "Las Vegas-Henderson, NV-AZ  CFS Area (NV Part)"
-    lat 36.2142575
-    lon -115.013812
+    label "202"
+    faf_id 202
+    y 37.61012123475915
+    x -97.34303661626127
   ]
   node [
     id 40
-    label "61"
-    faf_id 61
-    name "Los Angeles-Long Beach, CA  CFS Area"
-    lat 34.3587415
-    lon -119.1331432
+    label "209"
+    faf_id 209
+    y 38.38016553109313
+    x -97.90019394045966
   ]
   node [
     id 41
-    label "212"
-    faf_id 212
-    name "Louisville/Jefferson County-Elizabethtown-Madison, KY-IN  CFS Area (KY Part)"
-    lat 37.969928
-    lon -85.7026414
+    label "211"
+    faf_id 211
+    y 38.898924969598696
+    x -84.43702864982725
   ]
   node [
     id 42
-    label "471"
-    faf_id 471
-    name "Memphis-Forrest City, TN-MS-AR  CFS Area (TN Part)"
-    lat 35.1837942
-    lon -89.895397
+    label "212"
+    faf_id 212
+    y 38.12876978068406
+    x -85.71383704887602
   ]
   node [
     id 43
-    label "122"
-    faf_id 122
-    name "Miami-Fort Lauderdale-Port St. Lucie, FL  CFS Area"
-    lat 26.1935353
-    lon -80.4766834
+    label "219"
+    faf_id 219
+    y 37.43949892111451
+    x -85.37389010566642
   ]
   node [
     id 44
-    label "551"
-    faf_id 551
-    name "Milwaukee-Racine-Waukesha, WI  CFS Area"
-    lat 42.6681095
-    lon -88.5417306
+    label "221"
+    faf_id 221
+    y 30.43116677780952
+    x -91.19863073977488
   ]
   node [
     id 45
-    label "271"
-    faf_id 271
-    name "Minneapolis-St. Paul, MN-WI  CFS Area (MN Part)"
-    lat 45.9290434
-    lon -93.6329964
+    label "222"
+    faf_id 222
+    y 30.259428297079467
+    x -93.25979586267522
   ]
   node [
     id 46
-    label "12"
-    faf_id 12
-    name "Mobile-Daphne-Fairhope, AL  CFS Area"
-    lat 30.6845725
-    lon -88.1965682
+    label "223"
+    faf_id 223
+    y 30.048172587872422
+    x -90.23793135431866
   ]
   node [
     id 47
-    label "472"
-    faf_id 472
-    name "Nashville-Davidson--Murfreesboro, TN  CFS Area"
-    lat 35.8433688
-    lon -86.4172127
+    label "229"
+    faf_id 229
+    y 31.671287584822878
+    x -92.75073072739474
   ]
   node [
     id 48
-    label "223"
-    faf_id 223
-    name "New Orleans-Metairie-Hammond, LA-MS  CFS Area (LA Part)"
-    lat 30.6215802
-    lon -90.4066329
+    label "230"
+    faf_id 230
+    y 44.966854041840925
+    x -69.21418771984953
   ]
   node [
     id 49
-    label "92"
-    faf_id 92
-    name "New York-Newark, NY-NJ-CT-PA  CFS Area (CT Part)"
-    lat 41.3497173
-    lon -72.9002037
+    label "241"
+    faf_id 241
+    y 39.27464554082407
+    x -76.56516278850361
   ]
   node [
     id 50
-    label "341"
-    faf_id 341
-    name "New York-Newark, NY-NJ-CT-PA  CFS Area (NJ Part)"
-    lat 41.1374609
-    lon -74.6919141
+    label "242"
+    faf_id 242
+    y 39.03388157768564
+    x -77.17486004608676
   ]
   node [
     id 51
-    label "363"
-    faf_id 363
-    name "New York-Newark, NY-NJ-CT-PA  CFS Area (NY Part)"
-    lat 41.9472124
-    lon -74.2654582
+    label "249"
+    faf_id 249
+    y 39.35658686137354
+    x -77.37670847110472
   ]
   node [
     id 52
-    label "423"
-    faf_id 423
-    name "New York-Newark, NY-NJ-CT-PA  CFS Area (PA Part)"
-    lat 41.0562401
-    lon -75.3290651
+    label "251"
+    faf_id 251
+    y 42.28137573156813
+    x -71.27239566122414
   ]
   node [
     id 53
-    label "401"
-    faf_id 401
-    name "Oklahoma City-Shawnee, OK  CFS Area"
-    lat 35.54341
-    lon -97.9798435
+    label "259"
+    faf_id 259
+    y 42.29632680883761
+    x -72.68561201169173
   ]
   node [
     id 54
-    label "311"
-    faf_id 311
-    name "Omaha-Council Bluffs-Fremont, NE-IA  CFS Area (NE Part)"
-    lat 40.9098778
-    lon -96.1406086
+    label "261"
+    faf_id 261
+    y 42.401811996251574
+    x -83.27262238911534
   ]
   node [
     id 55
-    label "123"
-    faf_id 123
-    name "Orlando-Deltona-Daytona Beach, FL  CFS Area"
-    lat 29.057769
-    lon -81.161792
+    label "262"
+    faf_id 262
+    y 42.96093428973364
+    x -85.78744679126649
   ]
   node [
     id 56
-    label "101"
-    faf_id 101
-    name "Philadelphia-Reading-Camden, PA-NJ-DE-MD  CFS Area (DE Part)"
-    lat 39.5759152
-    lon -75.6441324
+    label "269"
+    faf_id 269
+    y 43.84687628890964
+    x -85.21397486704198
   ]
   node [
     id 57
-    label "342"
-    faf_id 342
-    name "Philadelphia-Reading-Camden, PA-NJ-DE-MD  CFS Area (NJ Part)"
-    lat 39.8023521
-    lon -74.9612507
+    label "271"
+    faf_id 271
+    y 44.98370411181491
+    x -93.38031780585013
   ]
   node [
     id 58
-    label "421"
-    faf_id 421
-    name "Philadelphia-Reading-Camden, PA-NJ-DE-MD  CFS Area (PA Part)"
-    lat 40.0093755
-    lon -75.1333459
+    label "279"
+    faf_id 279
+    y 46.10523394075563
+    x -94.41922626089436
   ]
   node [
     id 59
-    label "41"
-    faf_id 41
-    name "Phoenix-Mesa-Scottsdale, AZ  CFS Area"
-    lat 32.9185385
-    lon -111.3663874
+    label "280"
+    faf_id 280
+    y 32.55737535772748
+    x -89.4837661352707
   ]
   node [
     id 60
-    label "422"
-    faf_id 422
-    name "Pittsburgh-New Castle-Weirton, PA-OH-WV  CFS Area (PA Part)"
-    lat 40.6841401
-    lon -80.3507209
+    label "291"
+    faf_id 291
+    y 39.1883179137759
+    x -94.51407539846163
   ]
   node [
     id 61
-    label "411"
-    faf_id 411
-    name "Portland-Vancouver-Salem, OR-WA  CFS Area (OR Part)"
-    lat 45.1604934
-    lon -122.1951274
+    label "292"
+    faf_id 292
+    y 38.57427372241324
+    x -90.42541681863123
   ]
   node [
     id 62
-    label "532"
-    faf_id 532
-    name "Portland-Vancouver-Salem, OR-WA  CFS Area (WA Part)"
-    lat 46.1967854
-    lon -122.6784596
+    label "299"
+    faf_id 299
+    y 38.10543609606481
+    x -92.43633588880301
   ]
   node [
     id 63
-    label "373"
-    faf_id 373
-    name "Raleigh-Durham-Chapel Hill, NC  CFS Area"
-    lat 35.7049939
-    lon -79.2514542
+    label "300"
+    faf_id 300
+    y 47.03775814844174
+    x -110.29014998108657
   ]
   node [
     id 64
-    label "19"
-    faf_id 19
-    name "Remainder of Alabama"
-    lat 33.2703999
-    lon -85.8635254
+    label "311"
+    faf_id 311
+    y 41.25845111672225
+    x -96.17920041320613
   ]
   node [
     id 65
-    label "20"
-    faf_id 20
-    name "Alaska"
-    lat 55.4499378
-    lon -131.1066847
+    label "319"
+    faf_id 319
+    y 41.101376741881495
+    x -99.17162523563803
   ]
   node [
     id 66
-    label "49"
-    faf_id 49
-    name "Remainder of Arizona"
-    lat 32.7739424
-    lon -113.910905
+    label "321"
+    faf_id 321
+    y 36.18434569938816
+    x -115.04756542397814
   ]
   node [
     id 67
-    label "50"
-    faf_id 50
-    name "Arkansas"
-    lat 35.8570169
-    lon -92.140508
+    label "329"
+    faf_id 329
+    y 39.84788697076725
+    x -117.60696246618674
   ]
   node [
     id 68
-    label "69"
-    faf_id 69
-    name "Remainder of California"
-    lat 39.5769252
-    lon -120.5219926
+    label "331"
+    faf_id 331
+    y 43.054369058171595
+    x -71.29500131307408
   ]
   node [
     id 69
-    label "89"
-    faf_id 89
-    name "Remainder of Colorado"
-    lat 38.0316514
-    lon -106.2346662
+    label "339"
+    faf_id 339
+    y 44.02820772034656
+    x -71.6154370504366
   ]
   node [
     id 70
-    label "99"
-    faf_id 99
-    name "Remainder of Connecticut"
-    lat 41.4726517
-    lon -72.1086339
+    label "341"
+    faf_id 341
+    y 40.631671225120954
+    x -74.27558956456251
   ]
   node [
     id 71
-    label "109"
-    faf_id 109
-    name "Remainder of Delaware"
-    lat 38.6732275
-    lon -75.3370237
+    label "342"
+    faf_id 342
+    y 39.77681239282621
+    x -75.16553364298886
   ]
   node [
     id 72
-    label "129"
-    faf_id 129
-    name "Remainder of Florida"
-    lat 30.1403575
-    lon -84.3751122
+    label "350"
+    faf_id 350
+    y 34.139471014157515
+    x -105.89818193375142
   ]
   node [
     id 73
-    label "139"
-    faf_id 139
-    name "Remainder of Georgia"
-    lat 33.4796231
-    lon -82.4787331
+    label "361"
+    faf_id 361
+    y 42.795674407231765
+    x -73.79615292407748
   ]
   node [
     id 74
-    label "159"
-    faf_id 159
-    name "Remainder of Hawaii"
-    lat 21.2187644
-    lon -156.9740097
+    label "362"
+    faf_id 362
+    y 42.85878730367769
+    x -78.83770040611994
   ]
   node [
     id 75
-    label "160"
-    faf_id 160
-    name "Idaho"
-    lat 43.7969649
-    lon -112.3185879
+    label "363"
+    faf_id 363
+    y 40.91780665842926
+    x -73.79257113335206
   ]
   node [
     id 76
-    label "179"
-    faf_id 179
-    name "Remainder of Illinois"
-    lat 40.4057924
-    lon -91.1679875
+    label "364"
+    faf_id 364
+    y 42.965097550929215
+    x -77.47186888008103
   ]
   node [
     id 77
-    label "189"
-    faf_id 189
-    name "Remainder of Indiana"
-    lat 38.940527
-    lon -84.9642994
+    label "369"
+    faf_id 369
+    y 43.111712884064296
+    x -76.01168226343944
   ]
   node [
     id 78
-    label "190"
-    faf_id 190
-    name "Iowa"
-    lat 40.7363787
-    lon -93.7845799
+    label "371"
+    faf_id 371
+    y 35.34556424327417
+    x -80.84102399921751
   ]
   node [
     id 79
-    label "209"
-    faf_id 209
-    name "Remainder of Kansas"
-    lat 37.8793472
-    lon -96.2417321
+    label "372"
+    faf_id 372
+    y 36.02305694683434
+    x -80.05559152848228
   ]
   node [
     id 80
-    label "219"
-    faf_id 219
-    name "Remainder of Kentucky"
-    lat 36.7272577
-    lon -85.1360977
+    label "373"
+    faf_id 373
+    y 35.84038760788401
+    x -78.75889481477978
   ]
   node [
     id 81
-    label "229"
-    faf_id 229
-    name "Remainder of Louisiana"
-    lat 32.8293486
-    lon -92.3756501
+    label "379"
+    faf_id 379
+    y 35.12350563977447
+    x -78.83794988851007
   ]
   node [
     id 82
-    label "230"
-    faf_id 230
-    name "Maine"
-    lat 44.1676811
-    lon -70.2074347
+    label "380"
+    faf_id 380
+    y 47.5941648770847
+    x -99.73814778799616
   ]
   node [
     id 83
-    label "249"
-    faf_id 249
-    name "Remainder of Maryland"
-    lat 38.2221332
-    lon -75.3099315
+    label "391"
+    faf_id 391
+    y 39.282629713106815
+    x -84.42737279229132
   ]
   node [
     id 84
-    label "259"
-    faf_id 259
-    name "Remainder of Massachusetts"
-    lat 42.3394593
-    lon -72.6636936
+    label "392"
+    faf_id 392
+    y 41.258827591524096
+    x -81.6515477683383
   ]
   node [
     id 85
-    label "269"
-    faf_id 269
-    name "Remainder of Michigan"
-    lat 45.5382374
-    lon -87.4929489
+    label "393"
+    faf_id 393
+    y 39.98883311075625
+    x -82.92045407376058
   ]
   node [
     id 86
-    label "279"
-    faf_id 279
-    name "Remainder of Minnesota"
-    lat 43.6791869
-    lon -92.0939369
+    label "394"
+    faf_id 394
+    y 39.96314290876283
+    x -84.13284441459705
   ]
   node [
     id 87
-    label "280"
-    faf_id 280
-    name "Mississippi"
-    lat 32.0169894
-    lon -89.1194302
+    label "399"
+    faf_id 399
+    y 40.80216428858884
+    x -82.88045192010398
   ]
   node [
     id 88
-    label "299"
-    faf_id 299
-    name "Remainder of Missouri"
-    lat 38.3864909
-    lon -93.7926278
+    label "401"
+    faf_id 401
+    y 35.4392687274237
+    x -97.52725218122677
   ]
   node [
     id 89
-    label "300"
-    faf_id 300
-    name "Montana"
-    lat 46.5052807
-    lon -108.4397631
+    label "402"
+    faf_id 402
+    y 36.130481720247
+    x -95.8553641151805
   ]
   node [
     id 90
-    label "319"
-    faf_id 319
-    name "Remainder of Nebraska"
-    lat 41.9158651
-    lon -96.7885168
+    label "409"
+    faf_id 409
+    y 35.35448762491511
+    x -97.05304419286719
   ]
   node [
     id 91
-    label "329"
-    faf_id 329
-    name "Remainder of Nevada"
-    lat 39.53771
-    lon -118.2641654
+    label "411"
+    faf_id 411
+    y 45.33032208553141
+    x -122.8369918580289
   ]
   node [
     id 92
-    label "339"
-    faf_id 339
-    name "Remainder of New Hampshire"
-    lat 43.9264394
-    lon -71.842422
+    label "419"
+    faf_id 419
+    y 44.28450130135158
+    x -121.28182888482002
   ]
   node [
     id 93
-    label "350"
-    faf_id 350
-    name "New Mexico"
-    lat 34.3592729
-    lon -104.3686961
+    label "421"
+    faf_id 421
+    y 40.070222168651085
+    x -75.37961833167438
   ]
   node [
     id 94
-    label "369"
-    faf_id 369
-    name "Remainder of New York"
-    lat 42.2667252
-    lon -77.3855253
+    label "422"
+    faf_id 422
+    y 40.5212173594244
+    x -79.96977434662597
   ]
   node [
     id 95
-    label "379"
-    faf_id 379
-    name "Remainder of North Carolina"
-    lat 34.6392096
-    lon -79.1008811
+    label "423"
+    faf_id 423
+    y 40.743267345683826
+    x -75.46190299414631
   ]
   node [
     id 96
-    label "380"
-    faf_id 380
-    name "North Dakota"
-    lat 48.3769789
-    lon -97.7222304
+    label "429"
+    faf_id 429
+    y 40.715887914982495
+    x -77.70305253242888
   ]
   node [
     id 97
-    label "399"
-    faf_id 399
-    name "Remainder of Ohio"
-    lat 41.0004711
-    lon -83.6660335
+    label "441"
+    faf_id 441
+    y 41.75509610109731
+    x -71.43724987160812
   ]
   node [
     id 98
-    label "409"
-    faf_id 409
-    name "Remainder of Oklahoma"
-    lat 35.8980428
-    lon -94.6510258
+    label "451"
+    faf_id 451
+    y 32.93944873306347
+    x -79.99772259576898
   ]
   node [
     id 99
-    label "419"
-    faf_id 419
-    name "Remainder of Oregon"
-    lat 45.593753
-    lon -117.1855796
+    label "452"
+    faf_id 452
+    y 34.761071721035464
+    x -82.1995957795543
   ]
   node [
     id 100
-    label "429"
-    faf_id 429
-    name "Remainder of Pennsylvania"
-    lat 41.513304
-    lon -79.249705
+    label "459"
+    faf_id 459
+    y 33.941131048815144
+    x -80.68652626088826
   ]
   node [
     id 101
-    label "459"
-    faf_id 459
-    name "Remainder of South Carolina"
-    lat 34.6893424
-    lon -81.1612488
+    label "460"
+    faf_id 460
+    y 44.37406681909993
+    x -98.70035092392664
   ]
   node [
     id 102
-    label "460"
-    faf_id 460
-    name "South Dakota"
-    lat 43.6674723
-    lon -96.7957261
+    label "471"
+    faf_id 471
+    y 35.12372841791327
+    x -89.98299920771221
   ]
   node [
     id 103
-    label "479"
-    faf_id 479
-    name "Remainder of Tennessee"
-    lat 35.1607616
-    lon -85.1977114
+    label "472"
+    faf_id 472
+    y 36.00154200802769
+    x -86.810879408242
   ]
   node [
     id 104
-    label "489"
-    faf_id 489
-    name "Remainder of Texas"
-    lat 30.8843921
-    lon -99.8539616
+    label "473"
+    faf_id 473
+    y 36.00675594387862
+    x -84.00315140246
   ]
   node [
     id 105
-    label "499"
-    faf_id 499
-    name "Remainder of Utah"
-    lat 41.6275976
-    lon -111.2402269
+    label "479"
+    faf_id 479
+    y 35.753734328953996
+    x -86.32926565962109
   ]
   node [
     id 106
-    label "500"
-    faf_id 500
-    name "Vermont"
-    lat 44.8589643
-    lon -72.9094023
+    label "481"
+    faf_id 481
+    y 30.339396702661297
+    x -97.6305314817635
   ]
   node [
     id 107
-    label "519"
-    faf_id 519
-    name "Remainder of Virginia"
-    lat 37.2853329
-    lon -80.0552407
+    label "482"
+    faf_id 482
+    y 30.070851811220454
+    x -94.00259996648595
   ]
   node [
     id 108
-    label "539"
-    faf_id 539
-    name "Remainder of Washington"
-    lat 46.2946377
-    lon -123.4244583
+    label "483"
+    faf_id 483
+    y 27.752777004490984
+    x -97.57426892366658
   ]
   node [
     id 109
-    label "540"
-    faf_id 540
-    name "West Virginia"
-    lat 38.332606
-    lon -80.0101207
+    label "484"
+    faf_id 484
+    y 32.86257233623785
+    x -96.96726156135124
   ]
   node [
     id 110
-    label "559"
-    faf_id 559
-    name "Remainder of Wisconsin&#13;"
-    lat 43.4279976
-    lon -89.943329
+    label "485"
+    faf_id 485
+    y 31.748597437196064
+    x -106.39424887392789
   ]
   node [
     id 111
-    label "560"
-    faf_id 560
-    name "Wyoming"
-    lat 42.2299932
-    lon -110.6829614
+    label "486"
+    faf_id 486
+    y 29.690611593226354
+    x -95.28500654111853
   ]
   node [
     id 112
-    label "511"
-    faf_id 511
-    name "Richmond, VA  CFS Area"
-    lat 37.7602149
-    lon -77.4913168
+    label "487"
+    faf_id 487
+    y 27.574384792762913
+    x -99.4395030119151
   ]
   node [
     id 113
-    label "364"
-    faf_id 364
-    name "Rochester-Batavia-Seneca Falls, NY  CFS Area"
-    lat 42.8563575
-    lon -77.3034968
+    label "488"
+    faf_id 488
+    y 29.401940748931025
+    x -98.45255795421782
   ]
   node [
     id 114
-    label "62"
-    faf_id 62
-    name "Sacramento-Roseville, CA  CFS Area"
-    lat 38.4500161
-    lon -121.3404408
+    label "489"
+    faf_id 489
+    y 32.169124696274174
+    x -98.68096916623398
   ]
   node [
     id 115
     label "491"
     faf_id 491
-    name "Salt Lake City-Provo-Orem, UT  CFS Area"
-    lat 41.0375594
-    lon -112.2019434
+    y 40.7606807941163
+    x -112.07074325146196
   ]
   node [
     id 116
-    label "488"
-    faf_id 488
-    name "San Antonio-New Braunfels, TX  CFS Area"
-    lat 29.756389
-    lon -99.2482849
+    label "499"
+    faf_id 499
+    y 39.25394000908701
+    x -111.65863102029212
   ]
   node [
     id 117
-    label "63"
-    faf_id 63
-    name "San Diego-Carlsbad, CA  CFS Area"
-    lat 33.0236041
-    lon -116.7761174
+    label "500"
+    faf_id 500
+    y 44.16644241660161
+    x -72.6929906820918
   ]
   node [
     id 118
-    label "64"
-    faf_id 64
-    name "San Jose-San Francisco-Oakland, CA  CFS Area"
-    lat 38.5251824
-    lon -122.9261095
+    label "511"
+    faf_id 511
+    y 37.429925694183964
+    x -77.39771116986883
   ]
   node [
     id 119
-    label "132"
-    faf_id 132
-    name "Savannah-Hinesville-Statesboro, GA  CFS Area"
-    lat 31.7495633
-    lon -81.7428697
+    label "512"
+    faf_id 512
+    y 36.90419500553512
+    x -76.40525449165845
   ]
   node [
     id 120
-    label "531"
-    faf_id 531
-    name "Seattle-Tacoma, WA  CFS Area"
-    lat 46.5800714
-    lon -122.3774443
+    label "513"
+    faf_id 513
+    y 38.70117554136935
+    x -77.57529047082087
   ]
   node [
     id 121
-    label "172"
-    faf_id 172
-    name "St. Louis-St. Charles-Farmington, MO-IL  CFS Area (IL Part)"
-    lat 38.885924
-    lon -89.4365916
+    label "519"
+    faf_id 519
+    y 37.438198775476735
+    x -79.72938076321726
   ]
   node [
     id 122
-    label "292"
-    faf_id 292
-    name "St. Louis-St. Charles-Farmington, MO-IL  CFS Area (MO Part)"
-    lat 38.4083125
-    lon -91.0734098
+    label "531"
+    faf_id 531
+    y 47.46250515785718
+    x -122.37721082124544
   ]
   node [
     id 123
-    label "124"
-    faf_id 124
-    name "Tampa-St. Petersburg-Clearwater, FL  CFS Area"
-    lat 28.5730426
-    lon -82.4662272
+    label "532"
+    faf_id 532
+    y 45.88586499816923
+    x -122.76488154088389
   ]
   node [
     id 124
-    label "42"
-    faf_id 42
-    name "Tucson-Nogales, AZ  CFS Area"
-    lat 32.1285226
-    lon -111.7830267
+    label "539"
+    faf_id 539
+    y 47.22838889345774
+    x -119.26865496447748
   ]
   node [
     id 125
-    label "402"
-    faf_id 402
-    name "Tulsa-Muskogee-Bartlesville, OK  CFS Area"
-    lat 35.6175506
-    lon -95.3839106
+    label "540"
+    faf_id 540
+    y 38.58097304471834
+    x -81.02182645995889
   ]
   node [
     id 126
-    label "151"
-    faf_id 151
-    name "Urban Honolulu, HI  CFS Area"
-    lat 21.4613654
-    lon -158.201974
+    label "551"
+    faf_id 551
+    y 43.075492114466904
+    x -88.19887632222202
   ]
   node [
     id 127
-    label "512"
-    faf_id 512
-    name "Virginia Beach-Norfolk, VA-NC  CFS Area (VA Part)"
-    lat 37.1283599
-    lon -76.3035337
+    label "559"
+    faf_id 559
+    y 44.402318808201194
+    x -89.63997701028545
   ]
   node [
     id 128
-    label "111"
-    faf_id 111
-    name "Washington-Arlington-Alexandria, DC-VA-MD-WV  CFS Area (DC Part)"
-    lat 38.9041031
-    lon -77.017229
-  ]
-  node [
-    id 129
-    label "242"
-    faf_id 242
-    name "Washington-Arlington-Alexandria, DC-VA-MD-WV  CFS Area (MD Part)"
-    lat 38.5226111
-    lon -76.5294935
-  ]
-  node [
-    id 130
-    label "513"
-    faf_id 513
-    name "Washington-Arlington-Alexandria, DC-VA-MD-WV  CFS Area (VA Part)"
-    lat 38.4153998
-    lon -77.4548785
-  ]
-  node [
-    id 131
-    label "202"
-    faf_id 202
-    name "Wichita-Arkansas City-Winfield, KS  CFS Area"
-    lat 37.2345068
-    lon -96.8372468
+    label "560"
+    faf_id 560
+    y 42.40837226381693
+    x -106.77916422745865
   ]
   edge [
     source 0
-    target 106
-    weight 3
+    target 2
+    weight 19
   ]
   edge [
-    source 0
-    target 94
+    source 1
+    target 2
     weight 2
   ]
   edge [
-    source 0
-    target 51
-    weight 1
-  ]
-  edge [
-    source 0
-    target 84
-    weight 1
+    source 1
+    target 25
+    weight 2
   ]
   edge [
     source 1
-    target 73
-    weight 10
-  ]
-  edge [
-    source 1
-    target 64
-    weight 1
-  ]
-  edge [
-    source 2
-    target 104
+    target 59
     weight 2
   ]
   edge [
     source 2
-    target 116
-    weight 3
+    target 25
+    weight 5
   ]
   edge [
-    source 3
-    target 83
-    weight 1
-  ]
-  edge [
-    source 3
-    target 129
-    weight 2
-  ]
-  edge [
-    source 3
-    target 100
-    weight 1
-  ]
-  edge [
-    source 4
-    target 87
-    weight 1
-  ]
-  edge [
-    source 4
-    target 81
-    weight 3
-  ]
-  edge [
-    source 4
-    target 48
+    source 2
+    target 26
     weight 4
   ]
   edge [
-    source 5
-    target 81
-    weight 1
+    source 2
+    target 28
+    weight 7
   ]
   edge [
-    source 5
-    target 104
-    weight 1
+    source 2
+    target 59
+    weight 9
   ]
   edge [
-    source 5
-    target 31
+    source 2
+    target 105
+    weight 5
+  ]
+  edge [
+    source 3
+    target 4
     weight 3
   ]
   edge [
+    source 3
+    target 5
+    weight 9
+  ]
+  edge [
+    source 4
+    target 5
+    weight 2
+  ]
+  edge [
     source 5
-    target 37
+    target 7
+    weight 2
+  ]
+  edge [
+    source 5
+    target 12
+    weight 1
+  ]
+  edge [
+    source 5
+    target 72
+    weight 4
+  ]
+  edge [
+    source 6
+    target 47
+    weight 8
+  ]
+  edge [
+    source 6
+    target 62
+    weight 7
+  ]
+  edge [
+    source 6
+    target 90
+    weight 9
+  ]
+  edge [
+    source 6
+    target 102
     weight 2
   ]
   edge [
     source 6
-    target 64
-    weight 12
-  ]
-  edge [
-    source 7
-    target 84
-    weight 1
+    target 114
+    weight 13
   ]
   edge [
     source 7
     target 9
-    weight 3
-  ]
-  edge [
-    source 7
-    target 8
     weight 1
   ]
   edge [
     source 7
-    target 70
-    weight 1
+    target 12
+    weight 8
   ]
   edge [
-    source 8
-    target 92
+    source 7
+    target 66
     weight 2
   ]
   edge [
     source 8
-    target 82
-    weight 2
+    target 10
+    weight 4
   ]
   edge [
-    source 9
-    target 70
-    weight 1
-  ]
-  edge [
-    source 10
-    target 94
+    source 8
+    target 12
     weight 5
   ]
   edge [
-    source 10
-    target 113
-    weight 3
+    source 9
+    target 12
+    weight 1
   ]
   edge [
     source 10
-    target 100
-    weight 2
+    target 12
+    weight 7
   ]
   edge [
     source 11
-    target 101
-    weight 3
-  ]
-  edge [
-    source 12
-    target 95
-    weight 2
-  ]
-  edge [
-    source 12
-    target 28
-    weight 3
-  ]
-  edge [
-    source 12
-    target 29
-    weight 2
-  ]
-  edge [
-    source 12
-    target 101
-    weight 2
-  ]
-  edge [
-    source 13
-    target 76
+    target 12
     weight 7
+  ]
+  edge [
+    source 12
+    target 67
+    weight 6
+  ]
+  edge [
+    source 12
+    target 92
+    weight 5
   ]
   edge [
     source 13
     target 14
-    weight 10
+    weight 11
   ]
   edge [
     source 13
-    target 110
+    target 128
+    weight 2
+  ]
+  edge [
+    source 14
+    target 40
     weight 6
   ]
   edge [
-    source 13
-    target 44
+    source 14
+    target 65
+    weight 6
+  ]
+  edge [
+    source 14
+    target 72
+    weight 6
+  ]
+  edge [
+    source 14
+    target 90
     weight 1
   ]
   edge [
     source 14
-    target 76
-    weight 2
-  ]
-  edge [
-    source 14
-    target 77
-    weight 13
-  ]
-  edge [
-    source 14
-    target 85
-    weight 2
-  ]
-  edge [
-    source 15
-    target 80
+    target 116
     weight 2
   ]
   edge [
     source 15
     target 16
-    weight 1
+    weight 6
   ]
   edge [
-    source 16
-    target 97
-    weight 2
+    source 15
+    target 17
+    weight 3
   ]
   edge [
-    source 16
-    target 18
-    weight 1
-  ]
-  edge [
-    source 16
-    target 21
+    source 15
+    target 53
     weight 3
   ]
   edge [
     source 16
-    target 77
+    target 53
+    weight 1
+  ]
+  edge [
+    source 16
+    target 75
+    weight 2
+  ]
+  edge [
+    source 17
+    target 52
+    weight 2
+  ]
+  edge [
+    source 17
+    target 97
+    weight 1
+  ]
+  edge [
+    source 18
+    target 19
+    weight 2
+  ]
+  edge [
+    source 18
+    target 51
     weight 4
   ]
   edge [
-    source 17
-    target 97
-    weight 24
-  ]
-  edge [
-    source 17
-    target 100
-    weight 7
-  ]
-  edge [
     source 18
-    target 97
-    weight 9
-  ]
-  edge [
-    source 18
-    target 21
+    target 93
     weight 5
   ]
   edge [
     source 19
-    target 104
-    weight 2
+    target 51
+    weight 3
   ]
   edge [
     source 20
-    target 104
-    weight 11
+    target 50
+    weight 7
   ]
   edge [
     source 20
-    target 98
-    weight 1
-  ]
-  edge [
-    source 21
-    target 97
-    weight 1
-  ]
-  edge [
-    source 21
-    target 77
-    weight 1
-  ]
-  edge [
-    source 22
-    target 69
-    weight 1
-  ]
-  edge [
-    source 22
-    target 111
-    weight 1
-  ]
-  edge [
-    source 23
-    target 85
-    weight 2
-  ]
-  edge [
-    source 23
-    target 97
-    weight 7
-  ]
-  edge [
-    source 24
-    target 93
-    weight 6
-  ]
-  edge [
-    source 24
-    target 104
-    weight 2
-  ]
-  edge [
-    source 25
-    target 77
-    weight 8
-  ]
-  edge [
-    source 25
-    target 97
-    weight 7
-  ]
-  edge [
-    source 25
-    target 85
-    weight 1
-  ]
-  edge [
-    source 26
-    target 68
-    weight 2
-  ]
-  edge [
-    source 27
-    target 85
-    weight 4
-  ]
-  edge [
-    source 28
-    target 95
-    weight 1
-  ]
-  edge [
-    source 28
-    target 107
-    weight 3
-  ]
-  edge [
-    source 28
-    target 63
-    weight 3
-  ]
-  edge [
-    source 29
-    target 101
-    weight 1
-  ]
-  edge [
-    source 29
-    target 95
-    weight 2
-  ]
-  edge [
-    source 29
-    target 73
-    weight 1
-  ]
-  edge [
-    source 30
-    target 49
-    weight 6
-  ]
-  edge [
-    source 30
-    target 70
-    weight 2
-  ]
-  edge [
-    source 30
-    target 84
-    weight 2
-  ]
-  edge [
-    source 31
-    target 104
-    weight 1
-  ]
-  edge [
-    source 32
-    target 77
-    weight 12
-  ]
-  edge [
-    source 33
-    target 73
-    weight 3
-  ]
-  edge [
-    source 33
-    target 55
-    weight 1
-  ]
-  edge [
-    source 33
-    target 72
-    weight 1
-  ]
-  edge [
-    source 34
-    target 79
-    weight 2
-  ]
-  edge [
-    source 34
-    target 35
-    weight 5
-  ]
-  edge [
-    source 35
-    target 88
-    weight 2
-  ]
-  edge [
-    source 36
-    target 95
-    weight 1
-  ]
-  edge [
-    source 36
-    target 103
-    weight 3
-  ]
-  edge [
-    source 36
-    target 80
-    weight 1
-  ]
-  edge [
-    source 37
-    target 81
-    weight 5
-  ]
-  edge [
-    source 38
-    target 104
-    weight 1
-  ]
-  edge [
-    source 39
-    target 40
-    weight 2
-  ]
-  edge [
-    source 39
-    target 91
-    weight 1
-  ]
-  edge [
-    source 40
-    target 66
-    weight 2
-  ]
-  edge [
-    source 40
-    target 68
-    weight 1
-  ]
-  edge [
-    source 40
-    target 117
-    weight 1
-  ]
-  edge [
-    source 41
-    target 77
-    weight 1
-  ]
-  edge [
-    source 41
-    target 80
-    weight 4
-  ]
-  edge [
-    source 42
-    target 87
-    weight 2
-  ]
-  edge [
-    source 42
-    target 103
-    weight 1
-  ]
-  edge [
-    source 42
-    target 67
-    weight 2
-  ]
-  edge [
-    source 43
-    target 72
-    weight 1
-  ]
-  edge [
-    source 44
-    target 110
-    weight 5
-  ]
-  edge [
-    source 44
-    target 76
-    weight 1
-  ]
-  edge [
-    source 45
-    target 110
-    weight 3
-  ]
-  edge [
-    source 45
-    target 86
-    weight 6
-  ]
-  edge [
-    source 46
-    target 72
-    weight 2
-  ]
-  edge [
-    source 46
-    target 64
-    weight 1
-  ]
-  edge [
-    source 46
-    target 87
-    weight 1
-  ]
-  edge [
-    source 47
-    target 103
-    weight 5
-  ]
-  edge [
-    source 47
-    target 80
-    weight 1
-  ]
-  edge [
-    source 48
-    target 87
-    weight 4
-  ]
-  edge [
-    source 48
-    target 81
-    weight 1
-  ]
-  edge [
-    source 49
-    target 84
-    weight 1
-  ]
-  edge [
-    source 49
-    target 51
-    weight 2
-  ]
-  edge [
-    source 50
-    target 51
-    weight 5
-  ]
-  edge [
-    source 50
-    target 52
-    weight 2
-  ]
-  edge [
-    source 50
-    target 57
-    weight 2
-  ]
-  edge [
-    source 50
-    target 58
-    weight 2
-  ]
-  edge [
-    source 51
-    target 52
-    weight 1
-  ]
-  edge [
-    source 51
-    target 94
-    weight 1
-  ]
-  edge [
-    source 52
-    target 94
-    weight 1
-  ]
-  edge [
-    source 52
-    target 100
-    weight 3
-  ]
-  edge [
-    source 52
-    target 58
-    weight 4
-  ]
-  edge [
-    source 53
-    target 98
-    weight 5
-  ]
-  edge [
-    source 53
-    target 125
-    weight 1
-  ]
-  edge [
-    source 54
-    target 90
-    weight 2
-  ]
-  edge [
-    source 54
-    target 78
-    weight 1
-  ]
-  edge [
-    source 55
-    target 72
-    weight 3
-  ]
-  edge [
-    source 55
-    target 123
-    weight 1
-  ]
-  edge [
-    source 56
-    target 83
-    weight 4
-  ]
-  edge [
-    source 56
-    target 58
-    weight 5
-  ]
-  edge [
-    source 56
-    target 71
-    weight 2
-  ]
-  edge [
-    source 57
-    target 58
-    weight 1
-  ]
-  edge [
-    source 58
-    target 100
-    weight 5
-  ]
-  edge [
-    source 59
-    target 66
-    weight 6
-  ]
-  edge [
-    source 59
-    target 124
-    weight 3
-  ]
-  edge [
-    source 60
-    target 100
-    weight 4
-  ]
-  edge [
-    source 60
-    target 97
-    weight 2
-  ]
-  edge [
-    source 60
-    target 109
-    weight 1
-  ]
-  edge [
-    source 61
-    target 99
-    weight 4
-  ]
-  edge [
-    source 61
-    target 62
-    weight 1
-  ]
-  edge [
-    source 62
     target 120
     weight 1
   ]
   edge [
-    source 62
-    target 108
-    weight 1
+    source 21
+    target 23
+    weight 2
   ]
   edge [
-    source 63
-    target 95
+    source 21
+    target 25
     weight 4
   ]
   edge [
-    source 63
-    target 107
-    weight 2
-  ]
-  edge [
-    source 64
-    target 87
-    weight 2
-  ]
-  edge [
-    source 64
-    target 103
-    weight 2
-  ]
-  edge [
-    source 64
-    target 72
-    weight 2
-  ]
-  edge [
-    source 64
-    target 73
-    weight 2
-  ]
-  edge [
-    source 66
-    target 93
-    weight 1
-  ]
-  edge [
-    source 66
-    target 124
-    weight 2
-  ]
-  edge [
-    source 66
-    target 68
-    weight 1
-  ]
-  edge [
-    source 67
-    target 88
-    weight 2
-  ]
-  edge [
-    source 67
-    target 104
-    weight 3
-  ]
-  edge [
-    source 67
-    target 81
-    weight 2
-  ]
-  edge [
-    source 67
-    target 98
-    weight 2
-  ]
-  edge [
-    source 68
-    target 114
-    weight 4
-  ]
-  edge [
-    source 68
-    target 99
-    weight 2
-  ]
-  edge [
-    source 68
-    target 118
-    weight 2
-  ]
-  edge [
-    source 68
-    target 91
-    weight 1
-  ]
-  edge [
-    source 68
-    target 117
-    weight 1
-  ]
-  edge [
-    source 69
-    target 105
-    weight 2
-  ]
-  edge [
-    source 69
-    target 93
-    weight 2
-  ]
-  edge [
-    source 69
-    target 90
-    weight 1
-  ]
-  edge [
-    source 69
-    target 79
-    weight 6
-  ]
-  edge [
-    source 69
-    target 98
-    weight 1
-  ]
-  edge [
-    source 71
-    target 83
-    weight 1
-  ]
-  edge [
-    source 72
-    target 73
-    weight 1
-  ]
-  edge [
-    source 72
-    target 123
-    weight 3
-  ]
-  edge [
-    source 73
-    target 103
-    weight 4
-  ]
-  edge [
-    source 73
-    target 101
-    weight 2
-  ]
-  edge [
-    source 73
-    target 119
-    weight 2
-  ]
-  edge [
-    source 75
-    target 108
-    weight 10
-  ]
-  edge [
-    source 75
-    target 115
-    weight 1
-  ]
-  edge [
-    source 75
-    target 105
-    weight 2
-  ]
-  edge [
-    source 75
-    target 89
-    weight 1
-  ]
-  edge [
-    source 75
-    target 111
-    weight 1
-  ]
-  edge [
-    source 75
-    target 99
-    weight 1
-  ]
-  edge [
-    source 76
-    target 121
+    source 21
+    target 28
     weight 5
   ]
   edge [
-    source 76
-    target 77
-    weight 2
+    source 22
+    target 25
+    weight 5
   ]
   edge [
-    source 76
-    target 78
-    weight 8
+    source 23
+    target 24
+    weight 1
   ]
   edge [
-    source 76
-    target 88
+    source 23
+    target 25
     weight 4
   ]
   edge [
-    source 76
-    target 110
-    weight 1
+    source 24
+    target 25
+    weight 18
   ]
   edge [
-    source 76
-    target 80
-    weight 2
-  ]
-  edge [
-    source 77
-    target 85
+    source 25
+    target 28
     weight 3
   ]
   edge [
-    source 77
-    target 97
-    weight 2
+    source 26
+    target 28
+    weight 21
   ]
   edge [
-    source 77
-    target 80
-    weight 1
-  ]
-  edge [
-    source 78
-    target 102
-    weight 2
-  ]
-  edge [
-    source 78
-    target 88
-    weight 2
-  ]
-  edge [
-    source 78
-    target 86
-    weight 7
-  ]
-  edge [
-    source 78
-    target 90
-    weight 1
-  ]
-  edge [
-    source 79
-    target 88
-    weight 2
-  ]
-  edge [
-    source 79
-    target 131
-    weight 4
-  ]
-  edge [
-    source 79
-    target 90
-    weight 2
-  ]
-  edge [
-    source 79
-    target 125
-    weight 1
-  ]
-  edge [
-    source 79
-    target 98
-    weight 3
-  ]
-  edge [
-    source 80
-    target 109
+    source 27
+    target 28
     weight 6
   ]
   edge [
-    source 80
-    target 103
-    weight 4
-  ]
-  edge [
-    source 80
-    target 107
+    source 27
+    target 100
     weight 2
   ]
   edge [
-    source 80
-    target 97
-    weight 1
+    source 28
+    target 99
+    weight 2
   ]
   edge [
-    source 81
-    target 104
+    source 28
+    target 100
     weight 3
   ]
   edge [
-    source 81
-    target 87
-    weight 1
+    source 28
+    target 105
+    weight 11
   ]
   edge [
-    source 82
+    source 29
+    target 63
+    weight 4
+  ]
+  edge [
+    source 29
     target 92
-    weight 2
-  ]
-  edge [
-    source 83
-    target 107
-    weight 1
-  ]
-  edge [
-    source 83
-    target 129
-    weight 2
-  ]
-  edge [
-    source 83
-    target 100
-    weight 1
-  ]
-  edge [
-    source 83
-    target 109
-    weight 7
-  ]
-  edge [
-    source 84
-    target 106
-    weight 2
-  ]
-  edge [
-    source 85
-    target 110
-    weight 4
-  ]
-  edge [
-    source 86
-    target 102
-    weight 6
-  ]
-  edge [
-    source 86
-    target 110
-    weight 1
-  ]
-  edge [
-    source 86
-    target 96
-    weight 1
-  ]
-  edge [
-    source 87
-    target 103
     weight 3
   ]
   edge [
-    source 88
-    target 122
-    weight 10
-  ]
-  edge [
-    source 88
-    target 98
-    weight 1
-  ]
-  edge [
-    source 88
-    target 90
-    weight 1
-  ]
-  edge [
-    source 89
-    target 96
-    weight 1
-  ]
-  edge [
-    source 89
-    target 111
-    weight 3
-  ]
-  edge [
-    source 90
-    target 102
-    weight 2
-  ]
-  edge [
-    source 90
-    target 111
-    weight 5
-  ]
-  edge [
-    source 91
-    target 105
-    weight 2
-  ]
-  edge [
-    source 91
+    source 29
     target 115
-    weight 3
-  ]
-  edge [
-    source 92
-    target 106
-    weight 2
-  ]
-  edge [
-    source 93
-    target 104
-    weight 6
-  ]
-  edge [
-    source 94
-    target 113
-    weight 3
-  ]
-  edge [
-    source 94
-    target 100
-    weight 7
-  ]
-  edge [
-    source 95
-    target 107
-    weight 5
-  ]
-  edge [
-    source 95
-    target 127
     weight 1
   ]
   edge [
-    source 95
-    target 101
-    weight 2
-  ]
-  edge [
-    source 95
-    target 103
-    weight 1
-  ]
-  edge [
-    source 96
-    target 102
-    weight 5
-  ]
-  edge [
-    source 97
-    target 109
-    weight 1
-  ]
-  edge [
-    source 97
-    target 100
-    weight 3
-  ]
-  edge [
-    source 98
-    target 131
-    weight 1
-  ]
-  edge [
-    source 98
-    target 104
-    weight 3
-  ]
-  edge [
-    source 98
-    target 125
-    weight 2
-  ]
-  edge [
-    source 99
-    target 108
-    weight 1
-  ]
-  edge [
-    source 100
-    target 109
-    weight 3
-  ]
-  edge [
-    source 101
-    target 119
-    weight 2
-  ]
-  edge [
-    source 102
-    target 111
-    weight 2
-  ]
-  edge [
-    source 103
-    target 107
-    weight 4
-  ]
-  edge [
-    source 104
+    source 29
     target 116
     weight 2
   ]
   edge [
-    source 105
-    target 115
+    source 29
+    target 124
+    weight 10
+  ]
+  edge [
+    source 29
+    target 128
+    weight 1
+  ]
+  edge [
+    source 30
+    target 32
+    weight 24
+  ]
+  edge [
+    source 30
+    target 33
+    weight 18
+  ]
+  edge [
+    source 30
+    target 126
+    weight 2
+  ]
+  edge [
+    source 30
+    target 127
+    weight 6
+  ]
+  edge [
+    source 31
+    target 32
+    weight 27
+  ]
+  edge [
+    source 31
+    target 61
+    weight 3
+  ]
+  edge [
+    source 32
+    target 33
+    weight 2
+  ]
+  edge [
+    source 32
+    target 36
+    weight 15
+  ]
+  edge [
+    source 32
+    target 37
+    weight 8
+  ]
+  edge [
+    source 32
+    target 43
+    weight 2
+  ]
+  edge [
+    source 32
+    target 62
+    weight 4
+  ]
+  edge [
+    source 32
+    target 126
+    weight 1
+  ]
+  edge [
+    source 32
+    target 127
+    weight 3
+  ]
+  edge [
+    source 33
+    target 36
+    weight 13
+  ]
+  edge [
+    source 33
+    target 56
+    weight 2
+  ]
+  edge [
+    source 34
+    target 36
+    weight 23
+  ]
+  edge [
+    source 35
+    target 36
+    weight 8
+  ]
+  edge [
+    source 35
+    target 56
+    weight 1
+  ]
+  edge [
+    source 35
+    target 87
+    weight 7
+  ]
+  edge [
+    source 36
+    target 42
+    weight 2
+  ]
+  edge [
+    source 36
+    target 43
+    weight 1
+  ]
+  edge [
+    source 36
+    target 56
+    weight 3
+  ]
+  edge [
+    source 36
+    target 83
     weight 5
   ]
   edge [
-    source 107
+    source 36
+    target 86
+    weight 1
+  ]
+  edge [
+    source 36
+    target 87
+    weight 2
+  ]
+  edge [
+    source 37
+    target 58
+    weight 11
+  ]
+  edge [
+    source 37
+    target 62
+    weight 6
+  ]
+  edge [
+    source 37
+    target 64
+    weight 7
+  ]
+  edge [
+    source 37
+    target 65
+    weight 1
+  ]
+  edge [
+    source 37
+    target 101
+    weight 8
+  ]
+  edge [
+    source 38
+    target 40
+    weight 10
+  ]
+  edge [
+    source 38
+    target 60
+    weight 25
+  ]
+  edge [
+    source 39
+    target 40
+    weight 10
+  ]
+  edge [
+    source 39
+    target 90
+    weight 3
+  ]
+  edge [
+    source 40
+    target 62
+    weight 9
+  ]
+  edge [
+    source 40
+    target 65
+    weight 5
+  ]
+  edge [
+    source 40
+    target 89
+    weight 1
+  ]
+  edge [
+    source 40
+    target 90
+    weight 7
+  ]
+  edge [
+    source 41
+    target 43
+    weight 7
+  ]
+  edge [
+    source 41
+    target 83
+    weight 2
+  ]
+  edge [
+    source 42
+    target 43
+    weight 6
+  ]
+  edge [
+    source 43
+    target 87
+    weight 1
+  ]
+  edge [
+    source 43
+    target 103
+    weight 1
+  ]
+  edge [
+    source 43
+    target 104
+    weight 2
+  ]
+  edge [
+    source 43
+    target 105
+    weight 11
+  ]
+  edge [
+    source 43
+    target 121
+    weight 6
+  ]
+  edge [
+    source 43
+    target 125
+    weight 13
+  ]
+  edge [
+    source 44
+    target 46
+    weight 4
+  ]
+  edge [
+    source 44
+    target 47
+    weight 4
+  ]
+  edge [
+    source 44
+    target 59
+    weight 1
+  ]
+  edge [
+    source 45
+    target 47
+    weight 9
+  ]
+  edge [
+    source 45
+    target 107
+    weight 2
+  ]
+  edge [
+    source 46
+    target 47
+    weight 1
+  ]
+  edge [
+    source 46
+    target 59
+    weight 5
+  ]
+  edge [
+    source 47
+    target 59
+    weight 1
+  ]
+  edge [
+    source 47
+    target 107
+    weight 1
+  ]
+  edge [
+    source 47
+    target 114
+    weight 3
+  ]
+  edge [
+    source 48
+    target 68
+    weight 2
+  ]
+  edge [
+    source 48
+    target 69
+    weight 2
+  ]
+  edge [
+    source 49
+    target 50
+    weight 6
+  ]
+  edge [
+    source 49
+    target 51
+    weight 5
+  ]
+  edge [
+    source 49
+    target 96
+    weight 2
+  ]
+  edge [
+    source 50
+    target 51
+    weight 2
+  ]
+  edge [
+    source 51
+    target 96
+    weight 11
+  ]
+  edge [
+    source 51
+    target 121
+    weight 1
+  ]
+  edge [
+    source 51
+    target 125
+    weight 19
+  ]
+  edge [
+    source 52
+    target 53
+    weight 5
+  ]
+  edge [
+    source 52
+    target 68
+    weight 3
+  ]
+  edge [
+    source 52
+    target 97
+    weight 6
+  ]
+  edge [
+    source 53
+    target 73
+    weight 1
+  ]
+  edge [
+    source 53
+    target 117
+    weight 2
+  ]
+  edge [
+    source 54
+    target 56
+    weight 15
+  ]
+  edge [
+    source 54
+    target 87
+    weight 10
+  ]
+  edge [
+    source 55
+    target 56
+    weight 8
+  ]
+  edge [
+    source 56
+    target 127
+    weight 5
+  ]
+  edge [
+    source 57
+    target 58
+    weight 19
+  ]
+  edge [
+    source 57
+    target 127
+    weight 4
+  ]
+  edge [
+    source 58
+    target 82
+    weight 7
+  ]
+  edge [
+    source 58
+    target 101
+    weight 6
+  ]
+  edge [
+    source 58
+    target 127
+    weight 9
+  ]
+  edge [
+    source 59
+    target 102
+    weight 5
+  ]
+  edge [
+    source 59
+    target 105
+    weight 4
+  ]
+  edge [
+    source 60
+    target 62
+    weight 15
+  ]
+  edge [
+    source 61
+    target 62
+    weight 14
+  ]
+  edge [
+    source 62
+    target 65
+    weight 1
+  ]
+  edge [
+    source 62
+    target 90
+    weight 2
+  ]
+  edge [
+    source 63
+    target 82
+    weight 9
+  ]
+  edge [
+    source 63
+    target 128
+    weight 3
+  ]
+  edge [
+    source 64
+    target 65
+    weight 7
+  ]
+  edge [
+    source 65
+    target 101
+    weight 2
+  ]
+  edge [
+    source 65
+    target 128
+    weight 5
+  ]
+  edge [
+    source 66
+    target 67
+    weight 1
+  ]
+  edge [
+    source 67
+    target 115
+    weight 3
+  ]
+  edge [
+    source 67
+    target 116
+    weight 2
+  ]
+  edge [
+    source 68
+    target 69
+    weight 2
+  ]
+  edge [
+    source 69
+    target 117
+    weight 8
+  ]
+  edge [
+    source 70
+    target 71
+    weight 2
+  ]
+  edge [
+    source 70
+    target 75
+    weight 9
+  ]
+  edge [
+    source 70
+    target 93
+    weight 2
+  ]
+  edge [
+    source 70
+    target 95
+    weight 6
+  ]
+  edge [
+    source 71
+    target 93
+    weight 2
+  ]
+  edge [
+    source 72
+    target 110
+    weight 6
+  ]
+  edge [
+    source 72
+    target 114
+    weight 6
+  ]
+  edge [
+    source 73
+    target 75
+    weight 1
+  ]
+  edge [
+    source 73
+    target 77
+    weight 5
+  ]
+  edge [
+    source 73
+    target 117
+    weight 3
+  ]
+  edge [
+    source 74
+    target 76
+    weight 3
+  ]
+  edge [
+    source 74
+    target 77
+    weight 9
+  ]
+  edge [
+    source 74
+    target 96
+    weight 2
+  ]
+  edge [
+    source 75
+    target 77
+    weight 1
+  ]
+  edge [
+    source 75
+    target 95
+    weight 1
+  ]
+  edge [
+    source 76
+    target 77
+    weight 11
+  ]
+  edge [
+    source 77
+    target 95
+    weight 1
+  ]
+  edge [
+    source 77
+    target 96
+    weight 9
+  ]
+  edge [
+    source 78
+    target 79
+    weight 3
+  ]
+  edge [
+    source 78
+    target 81
+    weight 13
+  ]
+  edge [
+    source 78
+    target 99
+    weight 2
+  ]
+  edge [
+    source 78
+    target 100
+    weight 2
+  ]
+  edge [
+    source 79
+    target 80
+    weight 3
+  ]
+  edge [
+    source 79
+    target 81
+    weight 4
+  ]
+  edge [
+    source 79
+    target 121
+    weight 3
+  ]
+  edge [
+    source 80
+    target 81
+    weight 8
+  ]
+  edge [
+    source 80
+    target 121
+    weight 2
+  ]
+  edge [
+    source 81
+    target 99
+    weight 2
+  ]
+  edge [
+    source 81
+    target 100
+    weight 5
+  ]
+  edge [
+    source 81
+    target 104
+    weight 1
+  ]
+  edge [
+    source 81
+    target 105
+    weight 1
+  ]
+  edge [
+    source 81
+    target 119
+    weight 1
+  ]
+  edge [
+    source 81
+    target 121
+    weight 6
+  ]
+  edge [
+    source 82
+    target 101
+    weight 8
+  ]
+  edge [
+    source 83
+    target 85
+    weight 1
+  ]
+  edge [
+    source 83
+    target 86
+    weight 4
+  ]
+  edge [
+    source 83
+    target 87
+    weight 4
+  ]
+  edge [
+    source 84
+    target 87
+    weight 45
+  ]
+  edge [
+    source 84
+    target 96
+    weight 9
+  ]
+  edge [
+    source 85
+    target 86
+    weight 8
+  ]
+  edge [
+    source 85
+    target 87
+    weight 18
+  ]
+  edge [
+    source 86
+    target 87
+    weight 2
+  ]
+  edge [
+    source 87
+    target 94
+    weight 6
+  ]
+  edge [
+    source 87
+    target 96
+    weight 3
+  ]
+  edge [
+    source 87
+    target 125
+    weight 7
+  ]
+  edge [
+    source 88
+    target 89
+    weight 1
+  ]
+  edge [
+    source 88
+    target 90
+    weight 13
+  ]
+  edge [
+    source 89
+    target 90
+    weight 8
+  ]
+  edge [
+    source 90
     target 109
     weight 2
   ]
   edge [
+    source 90
+    target 114
+    weight 9
+  ]
+  edge [
+    source 91
+    target 92
+    weight 10
+  ]
+  edge [
+    source 91
+    target 123
+    weight 1
+  ]
+  edge [
+    source 92
+    target 124
+    weight 5
+  ]
+  edge [
+    source 93
+    target 95
+    weight 4
+  ]
+  edge [
+    source 93
+    target 96
+    weight 6
+  ]
+  edge [
+    source 94
+    target 96
+    weight 11
+  ]
+  edge [
+    source 94
+    target 125
+    weight 1
+  ]
+  edge [
+    source 95
+    target 96
+    weight 8
+  ]
+  edge [
+    source 96
+    target 125
+    weight 5
+  ]
+  edge [
+    source 98
+    target 100
+    weight 5
+  ]
+  edge [
+    source 99
+    target 100
+    weight 6
+  ]
+  edge [
+    source 101
+    target 128
+    weight 2
+  ]
+  edge [
+    source 102
+    target 105
+    weight 5
+  ]
+  edge [
+    source 103
+    target 105
+    weight 8
+  ]
+  edge [
+    source 104
+    target 105
+    weight 11
+  ]
+  edge [
+    source 105
+    target 121
+    weight 7
+  ]
+  edge [
+    source 106
+    target 113
+    weight 3
+  ]
+  edge [
+    source 106
+    target 114
+    weight 6
+  ]
+  edge [
     source 107
-    target 112
+    target 111
     weight 3
   ]
   edge [
     source 107
-    target 130
-    weight 2
-  ]
-  edge [
-    source 107
-    target 127
-    weight 2
+    target 114
+    weight 3
   ]
   edge [
     source 108
-    target 120
-    weight 3
+    target 114
+    weight 4
   ]
   edge [
     source 109
-    target 130
-    weight 1
+    target 114
+    weight 17
+  ]
+  edge [
+    source 110
+    target 114
+    weight 2
   ]
   edge [
     source 111
-    target 115
-    weight 1
+    target 114
+    weight 13
   ]
   edge [
     source 112
-    target 127
-    weight 1
+    target 114
+    weight 2
   ]
   edge [
-    source 112
-    target 130
-    weight 1
-  ]
-  edge [
-    source 114
-    target 118
-    weight 1
-  ]
-  edge [
-    source 121
-    target 122
+    source 113
+    target 114
     weight 3
   ]
   edge [
-    source 128
-    target 129
+    source 115
+    target 116
+    weight 8
+  ]
+  edge [
+    source 115
+    target 128
     weight 1
   ]
   edge [
-    source 128
-    target 130
+    source 118
+    target 119
     weight 1
+  ]
+  edge [
+    source 118
+    target 120
+    weight 1
+  ]
+  edge [
+    source 118
+    target 121
+    weight 8
+  ]
+  edge [
+    source 119
+    target 121
+    weight 4
+  ]
+  edge [
+    source 120
+    target 121
+    weight 5
+  ]
+  edge [
+    source 120
+    target 125
+    weight 2
+  ]
+  edge [
+    source 121
+    target 125
+    weight 8
+  ]
+  edge [
+    source 122
+    target 123
+    weight 1
+  ]
+  edge [
+    source 122
+    target 124
+    weight 6
+  ]
+  edge [
+    source 123
+    target 124
+    weight 1
+  ]
+  edge [
+    source 126
+    target 127
+    weight 15
   ]
 ]
