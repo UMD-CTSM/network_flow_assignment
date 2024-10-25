@@ -4,9 +4,9 @@ import networkx as nx
 import pandas as pd
 from pathlib import Path
 
-@dataclass
 class FlowAssignment:
-  SUM_COLUMN : str
+  def __init__(self, railnet : nx.Graph) -> None:
+    self.path_segments = self.assign_segments(railnet)
   def assign_segments(self, railnet : nx.Graph) -> pd.DataFrame:
     shortest_paths = nx.all_pairs_shortest_path(railnet)
     path_segment_list = []
@@ -27,27 +27,25 @@ class FlowAssignment:
     path_segments = path_segments.set_index(['dms_orig', 'dms_dest'])
     return path_segments
 
-  def faf_flows_to_df(self, faf_flows : pd.DataFrame) -> pd.DataFrame:
+  def faf_flows_to_df(self, faf_flows : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     faf_flows = faf_flows.astype(int)
-    faf_flows_by_pair = faf_flows.groupby(['dms_orig', 'dms_dest']).agg({self.SUM_COLUMN: ['sum']})
+    faf_flows_by_pair = faf_flows.groupby(['dms_orig', 'dms_dest']).agg({SUM_COLUMN: ['sum']})
     faf_flows_by_pair.columns = faf_flows_by_pair.columns.map('_'.join)
     return faf_flows_by_pair
 
-  def merge_segments_flows(self, path_segments : pd.DataFrame, faf_flows_by_pair : pd.DataFrame) -> pd.DataFrame:
-    path_segments_w_traffic = path_segments.copy()
+  def merge_segments_flows(self, path_segments : pd.DataFrame, faf_flows_by_pair : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     path_segments_w_traffic = path_segments.join(faf_flows_by_pair)
-    segment_traffic = path_segments_w_traffic.groupby(['seg_start', 'seg_end']).agg({self.SUM_COLUMN + '_sum':['sum']})
+    segment_traffic = path_segments_w_traffic.groupby(['seg_start', 'seg_end']).agg({SUM_COLUMN + '_sum':['sum']})
     return segment_traffic
 
-  def apply_flows(self, railnet : nx.Graph, segment_traffic : pd.DataFrame) -> nx.Graph:
+  def apply_flows(self, railnet : nx.Graph, segment_traffic : pd.DataFrame, SUM_COLUMN) -> nx.Graph:
     for (start, end), traffic in segment_traffic.iterrows():
-      railnet.edges[(start, end)]['weight'] = float(traffic[self.SUM_COLUMN + '_sum']['sum'])
+      railnet.edges[(start, end)]['weight'] = float(traffic[SUM_COLUMN + '_sum']['sum'])
     return railnet
 
-  def run(self, railnet, input_flows : pd.DataFrame):
-    path_segments = self.assign_segments(railnet)
-    faf_flows_by_pair = self.faf_flows_to_df(input_flows)
-    segment_traffic = self.merge_segments_flows(path_segments, faf_flows_by_pair)
+  def run(self, input_flows : pd.DataFrame, SUM_COLUMN):
+    faf_flows_by_pair = self.faf_flows_to_df(input_flows, SUM_COLUMN)
+    return self.merge_segments_flows(self.path_segments, faf_flows_by_pair, SUM_COLUMN)[SUM_COLUMN + '_sum']['sum']
 
     railnet = self.apply_flows(railnet, segment_traffic)
     return railnet
@@ -65,10 +63,10 @@ if __name__ == "__main__":
   # Read arguments from command line
   args = parser.parse_args()
 
-  fa = FlowAssignment(SUM_COLUMN=args.sum_column)
+  fa = FlowAssignment(nx.read_gml(Path.cwd() / args.input_graph))
   nx.write_gml(fa.run(
-    nx.read_gml(Path.cwd() / args.input_graph),
-    pd.read_csv(Path.cwd() / args.input_flows)
+    pd.read_csv(Path.cwd() / args.input_flows),
+    SUM_COLUMN=args.sum_column
   ), args.output_graph)
   
 
