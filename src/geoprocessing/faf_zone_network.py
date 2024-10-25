@@ -11,6 +11,8 @@ import math
 from typing import Callable, Hashable, Dict, List
 from numbers import Number
 
+from IPython.display import display
+
 @dataclass
 class FafZoneNetwork:
   naRailNodesDf : gpd.GeoDataFrame
@@ -119,34 +121,32 @@ class FafZoneNetwork:
       node_list.append(self.network_node_fn(rrow, self.fafZoneNodesDf))
     return node_list
   
-  network_weight_fn : Callable[
-    [tuple[Hashable, pd.Series], pd.DataFrame], Number
-  ] = lambda rrow, df : rrow[1]['FRAARCID']
+  network_weight_fn : Callable[ [pd.DataFrame], pd.Series ] = lambda df : df['FRAARCID']
 
-  network_link_fn : Callable[
-    [tuple[Hashable, pd.Series], Callable, pd.DataFrame], tuple[Hashable, dict]
-  ] = lambda rrow, df : (
-    int(rrow[0][0]),
-    int(rrow[0][1]),
-  )
+  network_link_fn : Callable[ [pd.DataFrame], pd.DataFrame
+  ] = lambda df : df.reset_index()[['FAF_Zone_fr','FAF_Zone_to']]
+
   def createLinkList(self) -> List[tuple[Hashable, dict, Number]]:
-    links = []
-    for rrow in self.fafZoneLinksDf.iterrows():
-      links.append(
-        self.network_link_fn(rrow, self.fafZoneLinksDf)
-        + (self.network_weight_fn(rrow, self.fafZoneLinksDf),)
-      )
-    return links
+    linksDf = self.network_link_fn(self.fafZoneLinksDf)
+    linksDf['weight'] = self.network_weight_fn(self.fafZoneLinksDf)
+    return linksDf.values.tolist()
   
   def apply_flows(self, flow_dict):
-    self.fafZoneLinksDf['weight'] = [flow_dict[x] for x in self.fafZoneLinksDf.index]
+    self.fafZoneLinksDf['flows'] = [flow_dict[x] for x in self.fafZoneLinksDf.index]
     return self.fafZoneLinksDf
   
   def apply_flows_from_network(self, railnet_flows : nx.Graph):
     return self.apply_flows({e : railnet_flows.edges[e]['weight'] for e in railnet_flows.edges})
     
+def normalize( df : pd.Series):
+  return (df - df.min() ) / (df.max() - df.min())
 
-
+def link_weights(df : gpd.GeoDataFrame):
+  df['distance'] = df['geometry_fr'].distance(df['geometry_to'])
+  df['distance_norm'] = normalize(df['distance'])
+  df['n_tracks_norm'] = normalize(df['FRAARCID'])
+  print("Preprocessed")
+  return df[['n_tracks_norm', 'distance_norm']].sum(axis=0)
 
 if __name__ == "__main__":
   import argparse
