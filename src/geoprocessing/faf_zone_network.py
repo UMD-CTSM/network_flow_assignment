@@ -140,11 +140,13 @@ class FafZoneNetwork:
     
 def normalize( df : pd.Series):
   return (df - df.min() ) / (df.max() - df.min())
+def normalize_reverse( df : pd.Series):
+  return (df.max() - df ) / (df.max() - df.min())
 
 def link_weights(df : gpd.GeoDataFrame):
   df['distance'] = df['geometry_fr'].distance(df['geometry_to'])
-  df['distance_norm'] = normalize(df['distance'])
-  df['n_tracks_norm'] = normalize(df['FRAARCID'])
+  df['distance_norm'] = normalize_reverse(df['distance'])
+  df['n_tracks_norm'] = normalize_reverse(df['FRAARCID'])
   print("Preprocessed")
   return df[['n_tracks_norm', 'distance_norm']].sum(axis=0)
 
