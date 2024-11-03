@@ -4,6 +4,8 @@ import networkx as nx
 import pandas as pd
 from pathlib import Path
 
+from IPython.display import display
+
 class FlowAssignment:
   def __init__(self, railnet : nx.Graph) -> None:
     self.path_segments = self.assign_segments(railnet)
@@ -32,9 +34,14 @@ class FlowAssignment:
     faf_flows_by_pair = faf_flows.groupby(['dms_orig', 'dms_dest']).agg({SUM_COLUMN: ['sum']})
     faf_flows_by_pair.columns = faf_flows_by_pair.columns.map('_'.join)
     return faf_flows_by_pair
-
   def merge_segments_flows(self, path_segments : pd.DataFrame, faf_flows_by_pair : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     path_segments_w_traffic = path_segments.join(faf_flows_by_pair)
+    reversed_segs = path_segments_w_traffic.seg_start > path_segments_w_traffic.seg_end
+    reversed_seg_ends = path_segments_w_traffic.loc[reversed_segs, 'seg_end']
+    reversed_seg_starts = path_segments_w_traffic.loc[reversed_segs, 'seg_start']
+    
+    path_segments_w_traffic.loc[reversed_segs, 'seg_start'] = reversed_seg_ends
+    path_segments_w_traffic.loc[reversed_segs, 'seg_end'] = reversed_seg_starts
     segment_traffic = path_segments_w_traffic.groupby(['seg_start', 'seg_end']).agg({SUM_COLUMN + '_sum':['sum']})
     return segment_traffic
 
