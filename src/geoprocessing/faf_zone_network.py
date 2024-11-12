@@ -44,12 +44,12 @@ class FafZoneNetwork:
   def fafZoneNodesDf(self) -> gpd.GeoDataFrame:
     if self._fafZoneNodesDf is None:
       fafZoneNodesDf = self.naRailNodesWithFafZonesDf.dropna(subset=['FAF_Zone']).dissolve(['FAF_Zone'])
-      fafZoneNodesDf.geometry = fafZoneNodesDf.centroid
+      fafZoneNodesDf.geometry = fafZoneNodesDf.to_crs(epsg=3857).centroid.to_crs(4326)
       self._fafZoneNodesDf = fafZoneNodesDf
     return self._fafZoneNodesDf
 
-  # FR_SUF : str = '_fr'
-  # TO_SUF : str = '_to'
+  FR : str = '_fr'
+  TO : str = '_to'
 
   _naRailLinesWithFafZonesDf : gpd.GeoDataFrame = None
   @property
@@ -58,15 +58,15 @@ class FafZoneNetwork:
       nodeIdIndexFZDf = self.naRailNodesWithFafZonesDf
 
       naRailLinesWithFafZonesDf = self.naRailLinesDf.join(
-        nodeIdIndexFZDf.add_suffix('_fr'), on=self.FRFRANODE_COLNAME
+        nodeIdIndexFZDf.add_suffix(self.FR), on=self.FRFRANODE_COLNAME
       ).join(
-        nodeIdIndexFZDf.add_suffix('_to'), on=self.TOFRANODE_COLNAME
+        nodeIdIndexFZDf.add_suffix(self.TO), on=self.TOFRANODE_COLNAME
       )
 
       naRailLinesWithFafZonesDf = naRailLinesWithFafZonesDf[naRailLinesWithFafZonesDf.columns[
         ~(
-          naRailLinesWithFafZonesDf.columns.str.endswith('_fr')
-          | naRailLinesWithFafZonesDf.columns.str.endswith('_to')
+          naRailLinesWithFafZonesDf.columns.str.endswith(self.FR)
+          | naRailLinesWithFafZonesDf.columns.str.endswith(self.TO)
         )
       ].union(['FAF_Zone_fr', 'FAF_Zone_to'])]
       self._naRailLinesWithFafZonesDf = naRailLinesWithFafZonesDf
@@ -128,7 +128,9 @@ class FafZoneNetwork:
 
   def createLinkList(self) -> List[tuple[Hashable, dict, Number]]:
     linksDf = self.network_link_fn(self.fafZoneLinksDf)
-    linksDf['weight'] = self.network_weight_fn(self.fafZoneLinksDf)
+    self.fafZoneLinksDf['weight'] = self.network_weight_fn(self.fafZoneLinksDf)
+    linksDf['weight'] = self.fafZoneLinksDf['weight'].values
+    
     return linksDf.values.tolist()
   
   def apply_flows(self, flow_dict):
@@ -144,11 +146,10 @@ def normalize_reverse( df : pd.Series):
   return (df.max() - df ) / (df.max() - df.min())
 
 def link_weights(df : gpd.GeoDataFrame):
-  df['distance'] = df['geometry_fr'].distance(df['geometry_to'])
+  df['distance'] = df['geometry_fr'].to_crs(3857).distance(df['geometry_to'].to_crs(3857))
   df['distance_norm'] = normalize_reverse(df['distance'])
   df['n_tracks_norm'] = normalize_reverse(df['FRAARCID'])
-  print("Preprocessed")
-  return df[['n_tracks_norm', 'distance_norm']].sum(axis=0)
+  return df[['n_tracks_norm', 'distance_norm']].sum(axis=1)
 
 if __name__ == "__main__":
   import argparse
