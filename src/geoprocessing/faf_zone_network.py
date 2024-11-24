@@ -78,9 +78,7 @@ class FafZoneNetwork:
   @property
   def fafZoneLinksDf(self) -> gpd.GeoDataFrame:
     if self._fafZoneLinksDf is None:
-      fafZoneLinksDf = self.naRailLinesWithFafZonesDf[
-        self.naRailLinesWithFafZonesDf.FAF_Zone_fr != self.naRailLinesWithFafZonesDf.FAF_Zone_to
-      ]
+      fafZoneLinksDf = self.naRailLinesWithFafZonesDf
       flippedLinks = fafZoneLinksDf.FAF_Zone_fr > fafZoneLinksDf.FAF_Zone_to
       fafZoneLinksDf.loc[
         flippedLinks, ['FAF_Zone_fr', 'FAF_Zone_to']
