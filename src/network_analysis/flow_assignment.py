@@ -18,8 +18,8 @@ class FlowAssignment:
         path = paths[dest]
         for segment_i in range(len(path) - 1):
           path_segment_list.append({
-            'dms_orig': origin,
-            'dms_dest': dest,
+            'dms_orig': origin if origin < dest else dest,
+            'dms_dest': dest if origin < dest else origin,
             'seg_start': path[segment_i],
             'seg_end': path[segment_i + 1]
           })
@@ -31,9 +31,19 @@ class FlowAssignment:
 
   def faf_flows_to_df(self, faf_flows : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     faf_flows = faf_flows.astype(int)
+    larger_first_flows = faf_flows.dms_orig > faf_flows.dms_dest
+    faf_flows.loc[larger_first_flows, ['dms_orig', 'dms_dest']] = faf_flows.loc[larger_first_flows, ['dms_dest', 'dms_orig']].values
     faf_flows_by_pair = faf_flows.groupby(['dms_orig', 'dms_dest']).agg({SUM_COLUMN: ['sum']})
     faf_flows_by_pair.columns = faf_flows_by_pair.columns.map('_'.join)
+    
+    # Filter out self-flows
+    faf_flows_by_pair = faf_flows_by_pair.reset_index()
+    faf_flows_by_pair = faf_flows_by_pair.loc[faf_flows_by_pair.dms_orig != faf_flows_by_pair.dms_dest].set_index(['dms_orig', 'dms_dest'])
+
+    # Filter out flows with no value
+    faf_flows_by_pair = faf_flows_by_pair.loc[faf_flows_by_pair[SUM_COLUMN + '_sum'] > 0]
     return faf_flows_by_pair
+  
   def merge_segments_flows(self, path_segments : pd.DataFrame, faf_flows_by_pair : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     path_segments_w_traffic = path_segments.join(faf_flows_by_pair)
     reversed_segs = path_segments_w_traffic.seg_start > path_segments_w_traffic.seg_end
@@ -50,8 +60,9 @@ class FlowAssignment:
       railnet.edges[(start, end)]['weight'] = float(traffic[SUM_COLUMN + '_sum']['sum'])
     return railnet
 
-  def run(self, input_flows : pd.DataFrame, SUM_COLUMN):
-    faf_flows_by_pair = self.faf_flows_to_df(input_flows, SUM_COLUMN)
+  def run(self, input_flows : pd.DataFrame = None, SUM_COLUMN = '', faf_flows_by_pair=None):
+    if faf_flows_by_pair is None:
+      faf_flows_by_pair = self.faf_flows_to_df(input_flows, SUM_COLUMN)
     return self.merge_segments_flows(self.path_segments, faf_flows_by_pair, SUM_COLUMN)[SUM_COLUMN + '_sum']['sum']
 
     railnet = self.apply_flows(railnet, segment_traffic)
