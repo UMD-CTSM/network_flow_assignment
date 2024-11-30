@@ -94,6 +94,7 @@ class FafZoneNetwork:
           [r.geometry_fr.x, r.geometry_fr.y],
           [r.geometry_to.x, r.geometry_to.y]
       ]), axis=1)
+      fafZoneLinksDf = fafZoneLinksDf.loc[fafZoneLinksDf.index.get_level_values('FAF_Zone_fr') != fafZoneLinksDf.index.get_level_values('FAF_Zone_to')]
       self._fafZoneLinksDf = fafZoneLinksDf
     return self._fafZoneLinksDf
 
