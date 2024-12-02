@@ -56,14 +56,13 @@ class FlowAssignment:
   def add_intra_segment_flows(self, segment_traffic : pd.DataFrame, faf_flows_by_pair : pd.DataFrame, SUM_COLUMN) -> pd.DataFrame:
     intra_zone_flows = faf_flows_by_pair.loc[faf_flows_by_pair.index.get_level_values('dms_orig') == faf_flows_by_pair.index.get_level_values('dms_dest')]
     intra_zone_flows = intra_zone_flows.reset_index(1, drop=True)[SUM_COLUMN + '_sum']
-    display(segment_traffic.loc[segment_traffic.isna()])
     segment_traffic = segment_traffic.reset_index()
     segment_traffic = segment_traffic.join(intra_zone_flows, on='seg_start').rename(columns={SUM_COLUMN + '_sum': SUM_COLUMN + '_sum_start'})
     segment_traffic = segment_traffic.join(intra_zone_flows, on='seg_end').rename(columns={SUM_COLUMN + '_sum': SUM_COLUMN + '_sum_end'})
     segment_traffic = segment_traffic.fillna(0)
     segment_traffic['new_sum'] = segment_traffic['sum'] + (
       segment_traffic[SUM_COLUMN + '_sum_start'] + segment_traffic[SUM_COLUMN + '_sum_end']
-    ) / 2A
+    ) / 2
     display(segment_traffic.loc[segment_traffic.isna().any(axis=1)])
     segment_traffic = segment_traffic.set_index(['seg_start', 'seg_end'])
     return segment_traffic['new_sum']
