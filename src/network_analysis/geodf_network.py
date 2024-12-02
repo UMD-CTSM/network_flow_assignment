@@ -40,7 +40,7 @@ class GeoDataNetwork:
       nx.write_gml(network, write_to)
     return network
   
-  def createNodeList(self, skip) -> list:
+  def createNodeList(self, skip=[]) -> list:
     node_list = []
     for rrow in self.nodeDf.iterrows():
       if int(rrow[0]) in skip: continue
