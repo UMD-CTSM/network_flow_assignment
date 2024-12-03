@@ -36,14 +36,14 @@ class FafZoneNetwork:
         self.fafZonesDf,
         how='left',
         predicate="within"
-      ).set_index(self.FRA_NODE_ID_COLNAME)
+      ).set_index(self.FRA_NODE_ID_COLNAME).dropna(subset=['FAF_Zone']).astype({'FAF_Zone': int})
     return self._naRailNodesWithFafZonesDf
   
   _fafZoneNodesDf : gpd.GeoDataFrame = None
   @property
   def fafZoneNodesDf(self) -> gpd.GeoDataFrame:
     if self._fafZoneNodesDf is None:
-      fafZoneNodesDf = self.naRailNodesWithFafZonesDf.dropna(subset=['FAF_Zone']).dissolve(['FAF_Zone'])
+      fafZoneNodesDf = self.naRailNodesWithFafZonesDf.dissolve(['FAF_Zone'])
       fafZoneNodesDf.geometry = fafZoneNodesDf.to_crs(epsg=3857).centroid.to_crs(4326)
       self._fafZoneNodesDf = fafZoneNodesDf
     return self._fafZoneNodesDf
@@ -72,7 +72,9 @@ class FafZoneNetwork:
       self._naRailLinesWithFafZonesDf = naRailLinesWithFafZonesDf
     return self._naRailLinesWithFafZonesDf
 
-  link_aggregation_fn = 'count'
+  link_aggregation_fn = {
+    'FRAARCID': 'count',
+  }
 
   _fafZoneLinksDf : gpd.GeoDataFrame = None
   @property
@@ -134,7 +136,15 @@ class FafZoneNetwork:
   
   def apply_flows(self, flow_dict):
     self.fafZoneLinksDf['flows'] = [flow_dict[x] for x in self.fafZoneLinksDf.index]
+    
+    link_flows = self.fafZoneLinksDf.groupby('FAF_Zone_fr').agg({'flows': 'sum'}).add_suffix('_fr').join(
+      self.fafZoneLinksDf.groupby('FAF_Zone_to').agg({'flows': 'sum'}).add_suffix('_to'),
+      how='outer'
+    ).fillna(0)
+    self.fafZoneNodesDf['flows'] = (link_flows.flows_fr + link_flows.flows_to) / 2
+    self.fafZoneNodesDf['flows'] = self.fafZoneNodesDf['flows'].fillna(0)
     return self.fafZoneLinksDf
+  
   
   def apply_flows_from_network(self, railnet_flows : nx.Graph):
     return self.apply_flows({e : railnet_flows.edges[e]['weight'] for e in railnet_flows.edges})
@@ -148,7 +158,14 @@ def link_weights(df : gpd.GeoDataFrame):
   df['distance'] = df['geometry_fr'].to_crs(3857).distance(df['geometry_to'].to_crs(3857))
   df['distance_norm'] = normalize_reverse(df['distance'])
   df['n_tracks_norm'] = normalize_reverse(df['FRAARCID'])
-  return df[['n_tracks_norm', 'distance_norm']].sum(axis=1)
+  # df['node_degree'] = 
+  return df[['n_tracks_norm', 'distance_norm', 'node_degree']].sum(axis=1)
+
+
+def apply_to_network(railnet : nx.Graph, segment_traffic : pd.Series) -> nx.Graph:
+  for (start, end), traffic in segment_traffic.iterrows():
+    railnet.edges[(start, end)]['weight'] = float(traffic)
+  return railnet
 
 if __name__ == "__main__":
   import argparse
