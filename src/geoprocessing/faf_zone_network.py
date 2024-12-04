@@ -5,11 +5,11 @@ import pandas as pd
 from pandas import Series
 from pathlib import Path
 from shapely import LineString
-import numpy as np
-import math
 
-from typing import Callable, Hashable, Dict, List
+from typing import Callable, Hashable, List
 from numbers import Number
+
+from utils import normalize, normalize_reverse
 
 from IPython.display import display
 
@@ -108,7 +108,6 @@ class FafZoneNetwork:
       nx.write_gml(railnet, write_to)
     return railnet
 
-
   network_node_fn : Callable[
     [tuple[Hashable, pd.Series], pd.DataFrame], tuple[Hashable, dict]
   ] = lambda rrow, df : (
@@ -124,7 +123,8 @@ class FafZoneNetwork:
   
   network_weight_fn : Callable[ [pd.DataFrame], pd.Series ] = lambda df : df['FRAARCID']
 
-  network_link_fn : Callable[ [pd.DataFrame], pd.DataFrame
+  network_link_fn : Callable[
+    [pd.DataFrame], pd.DataFrame
   ] = lambda df : df.reset_index()[['FAF_Zone_fr','FAF_Zone_to']]
 
   def createLinkList(self) -> List[tuple[Hashable, dict, Number]]:
@@ -148,15 +148,11 @@ class FafZoneNetwork:
   
   def apply_flows_from_network(self, railnet_flows : nx.Graph):
     return self.apply_flows({e : railnet_flows.edges[e]['weight'] for e in railnet_flows.edges})
-    
-def normalize( df : pd.Series):
-  return (df - df.min() ) / (df.max() - df.min())
-def normalize_reverse( df : pd.Series):
-  return (df.max() - df ) / (df.max() - df.min())
+
 
 def link_weights(df : gpd.GeoDataFrame):
   df['distance'] = df['geometry_fr'].to_crs(3857).distance(df['geometry_to'].to_crs(3857))
-  df['distance_norm'] = normalize_reverse(df['distance'])
+  df['distance_norm'] = normalize(df['distance'])
   df['n_tracks_norm'] = normalize_reverse(df['FRAARCID'])
   # df['node_degree'] = 
   return df[['n_tracks_norm', 'distance_norm', 'node_degree']].sum(axis=1)
