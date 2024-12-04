@@ -2,11 +2,7 @@ import networkx as nx
 from dataclasses import dataclass
 import geopandas as gpd
 import pandas as pd
-from pandas import Series
-from pathlib import Path
-from shapely import LineString
-import numpy as np
-import math
+from .utils import fr, to
 from scipy import stats
 
 import folium
@@ -46,11 +42,11 @@ class GeoDataNetwork:
       nx.write_gml(network, write_to)
     return network
   
-  def calculate_centrality(self, network=None):
+  def calculate_centrality(self, network=None, weighted=True):
     if network is None:
       network = self.createNetwork()
-    self.apply_link_property('centrality', dict(nx.edge_betweenness_centrality(network, weight='weight')))
-    self.apply_node_property('centrality', dict(nx.betweenness_centrality(network, weight='weight')))
+    self.apply_link_property('centrality', dict(nx.edge_betweenness_centrality(network, weight='weight' if weighted else None)))
+    self.apply_node_property('centrality', dict(nx.betweenness_centrality(network, weight='weight' if weighted else None)))
   
   def createNodeList(self, skip=[]) -> list:
     node_list = []
@@ -82,11 +78,13 @@ class GeoDataNetwork:
 
   def remove_na(self):
     self.nodeDf = self.nodeDf.dropna(axis='index', subset=self.VALUE)
-    self.edgeDf = self.edgeDf.dropna(axis='index', subset=self.VALUE)
+    self.edgeDf = self.edgeDf.dropna(axis='index', subset=[
+      self.VALUE
+    ] if self.VALUE in self.edgeDf.columns else [fr(self.VALUE), to(self.VALUE)])
 
   link_normalizer = None
   node_normalizer = None
-  def create_normalizers(self, link_distrib=stats.genexpon, node_distrib=stats.uniform, default_zero=False):
+  def create_normalizers(self, link_distrib=stats.uniform, node_distrib=stats.uniform, default_zero=False):
     self.remove_na()
     if self.link_normalizer is None:
       link_flows = self.edgeDf[self.VALUE]
@@ -96,7 +94,7 @@ class GeoDataNetwork:
       self.node_normalizer = Normalizer(node_flows, node_distrib, default_zero=default_zero)
 
 
-  def show_map(self, zone_df=False):
+  def show_map(self, zone_df=False, color_nodes=False):
     
     self.create_normalizers()
 
@@ -181,10 +179,9 @@ class GeoDataNetwork:
     self.nodeDf[[self.LABEL, self.VALUE, 'geometry']].explore(
       m=m,
       color='black',
-      # column='flows',
       style_kwds={
         'style_function': lambda feature: {
-          # 'color': cm.linear.plasma(norm_w(feature)),
+          'color': cm.linear.plasma(self.node_normalizer(get_flow(feature))) if color_nodes else 'black',
           'weight': self.node_normalizer(get_flow(feature)) * (lineWeightMax - lineWeightMin) + lineWeightMin
         }
       }
@@ -193,8 +190,8 @@ class GeoDataNetwork:
     return m
 
   def show_values(self):
-    display(self.nodeDf[[self.LABEL, self.VALUE]])
-    display(self.edgeDf[[self.LABEL + '_fr', self.LABEL + '_to', self.VALUE]])
+    display(self.nodeDf[[self.LABEL, self.VALUE]].sort_values(self.VALUE, ascending=False).head(10))
+    display(self.edgeDf[[self.LABEL + '_fr', self.LABEL + '_to', self.VALUE]].sort_values(self.VALUE, ascending=False).head(10))
 
 class Normalizer:
   def __init__(self, data : pd.Series, distrib_obj=stats.genexpon, default_zero = False):
