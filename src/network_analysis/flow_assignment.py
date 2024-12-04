@@ -5,8 +5,6 @@ import networkx as nx
 import pandas as pd
 from pathlib import Path
 
-from IPython.display import display
-
 class FlowAssignment:
   def __init__(self, railnet : nx.Graph) -> None:
     self.path_segments = self.assign_segments(railnet)
