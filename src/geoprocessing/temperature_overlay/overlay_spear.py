@@ -23,8 +23,6 @@ def join_tas_diff(featureDf : gpd.GeoDataFrame, tasdiffDf = load_tas_diff()):
   if 'tas' in featureDf.columns:
     raise ValueError('tas column already exists in featureDf')
   df = gpd.sjoin_nearest(featureDf.to_crs(epsg=3857), tasdiffDf.to_crs(epsg=3857)).to_crs(epsg=4326)
-  from IPython.display import display
-  display(df)
   return df['tas']
 
 # joined['tas'] = joined['tas'] * 2/3
