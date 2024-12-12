@@ -2,7 +2,7 @@ import networkx as nx
 from dataclasses import dataclass
 import geopandas as gpd
 import pandas as pd
-from .utils import fr, to
+from utils import fr, to
 from scipy import stats
 
 import folium
@@ -192,7 +192,7 @@ class GeoDataNetwork:
   def show_values(self):
     display(self.nodeDf[[self.LABEL, self.VALUE]].sort_values(self.VALUE, ascending=False).head(10))
     display(self.edgeDf[[self.LABEL + '_fr', self.LABEL + '_to', self.VALUE]].sort_values(self.VALUE, ascending=False).head(10))
-
+    
 class Normalizer:
   def __init__(self, data : pd.Series, distrib_obj=stats.genexpon, default_zero = False):
     distrib_params = distrib_obj.fit(data)
