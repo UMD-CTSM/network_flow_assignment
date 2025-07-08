@@ -4,11 +4,11 @@ import netCDF4
 import xarray as xr
 from shapely import ops
 
-basePath = Path.cwd().parent / 'inputs'
-diffNcPath = basePath / 'spear_tas_diff.nc'
+# basePath = Path.cwd().parent / 'inputs'
+# diffNcPath = basePath / 'spear_tas_diff.nc'
 
 
-def load_tas_diff(path = diffNcPath):
+def load_tas_diff(path):
   tasDiffdf = xr.open_dataset(path).to_dataframe()
   # tasDiffdf.index.names =['geo_center_x_zone', 'geo_center_y_zone']
   tasDiffdf = tasDiffdf.reset_index()
@@ -19,7 +19,7 @@ def load_tas_diff(path = diffNcPath):
 
   return tasDiffdf
 
-def join_tas_diff(featureDf : gpd.GeoDataFrame, tasdiffDf = load_tas_diff()):
+def join_tas_diff(featureDf : gpd.GeoDataFrame, tasdiffDf):
   if 'tas' in featureDf.columns:
     raise ValueError('tas column already exists in featureDf')
   df = gpd.sjoin_nearest(featureDf.to_crs(epsg=3857), tasdiffDf.to_crs(epsg=3857)).to_crs(epsg=4326)
