@@ -8,7 +8,7 @@ import cftime
 import urllib.request
 import pathlib
 
-def download_files():
+def download_files( save_path='Data/spear' ):
     spear_ensembles = (
         "r10i1p1f1",
         "r11i1p1f1",
@@ -58,11 +58,15 @@ def download_files():
             print(f'starting {member}/{source}')
             filename = f'{spear_variable}_{spear_variable_cat}_GFDL-SPEAR-MED_{source}_{member}_gr3_{dates}.nc'
             filepath = f'{spear_BASE_URL}/{source}/{member}/{spear_variable_cat}/{spear_variable}/gr3/v20210201/{filename}'
-            local_filename = urllib.request.urlretrieve(filepath, f'Data/spear/{source}/{filename}')
+            local_filename = urllib.request.urlretrieve(filepath, pathlib.Path.cwd() / save_path / source / filename)
             print(local_filename)
+
+download_files('inputs/spear')
 
 basePath = pathlib.Path.cwd() / 'inputs' / 'spear'
 
+(basePath / 'scenarioSSP5-85').mkdir(parents=True, exist_ok=True)
+(basePath / 'historical').mkdir(parents=True, exist_ok=True)
 proj_tas_datasets = [netCDF4.Dataset(d) for d in (basePath / 'scenarioSSP5-85').iterdir()]
 hist_tas_datasets = [netCDF4.Dataset(d) for d in (basePath / 'historical').iterdir()]
 
