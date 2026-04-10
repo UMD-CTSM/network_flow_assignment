@@ -37,7 +37,8 @@ class GeoDataNetwork:
   def createNetwork(self, write_to=None, skip=[20, 159], NAME=None):
     network = nx.Graph(name=NAME)
     network.add_nodes_from(self.createNodeList(skip))
-    network.add_weighted_edges_from(self.createLinkList())
+    ll = self.createLinkList()
+    network.add_weighted_edges_from(ll)
     if write_to is not None:
       nx.write_gml(network, write_to)
     return network
@@ -77,7 +78,8 @@ class GeoDataNetwork:
     return self
 
   def remove_na(self):
-    self.nodeDf = self.nodeDf.dropna(axis='index', subset=self.VALUE)
+    if self.VALUE in self.nodeDf.columns:
+      self.nodeDf = self.nodeDf.dropna(axis='index', subset=self.VALUE)
     self.edgeDf = self.edgeDf.dropna(axis='index', subset=[
       self.VALUE
     ] if self.VALUE in self.edgeDf.columns else [fr(self.VALUE), to(self.VALUE)])
@@ -90,7 +92,7 @@ class GeoDataNetwork:
       link_flows = self.edgeDf[self.VALUE]
       self.link_normalizer = Normalizer(link_flows, link_distrib, default_zero=default_zero)
     if self.node_normalizer is None:
-      node_flows = self.nodeDf[self.VALUE]
+      node_flows = self.nodeDf[self.VALUE] if self.VALUE in self.nodeDf.columns else 0
       self.node_normalizer = Normalizer(node_flows, node_distrib, default_zero=default_zero)
 
 
@@ -109,7 +111,7 @@ class GeoDataNetwork:
       location=[42, -95],
       zoom_start=4,
       min_zoom=4,
-      tiles='OpenStreetMap',
+      tiles='Esri.WorldTerrain',
       # max_lat=max_lat,
       # min_lon=min_lon,
       # max_lon=max_lon,
@@ -128,7 +130,7 @@ class GeoDataNetwork:
       zone_df.geometry = zone_df.geometry.simplify(.15)
       zone_df[[self.LABEL, 'geometry']].explore(
         m=m,
-        column=self.LABEL,
+        column=self.LABEL if self.LABEL in zone_df.columns else None,
         cmap='Greens',
         legend=False,
         style_kwds={'opacity':.1}
@@ -162,7 +164,7 @@ class GeoDataNetwork:
     get_flow = lambda feature : feature['properties'][self.VALUE]
     self.edgeDf[[self.LABEL + '_fr', self.LABEL + '_to', self.VALUE, 'geometry']].explore(
       m=m,
-      column=self.VALUE,
+      column=self.VALUE if self.VALUE in self.edgeDf.columns else None,
       style_kwds={
         'style_function': lambda feature: {
           'color': cm.linear.plasma(self.link_normalizer(get_flow(feature))),
@@ -175,14 +177,20 @@ class GeoDataNetwork:
       }
     )
 
-
-    self.nodeDf[[self.LABEL, self.VALUE, 'geometry']].explore(
+    nodecols = [self.LABEL, 'geometry']
+    if self.VALUE in self.nodeDf.columns:
+      print("Node value column found:", self.VALUE)
+      nodecols.insert(1, self.VALUE)
+    self.nodeDf[nodecols].explore(
       m=m,
       color='black',
       style_kwds={
         'style_function': lambda feature: {
           'color': cm.linear.plasma(self.node_normalizer(get_flow(feature))) if color_nodes else 'black',
           'weight': self.node_normalizer(get_flow(feature)) * (lineWeightMax - lineWeightMin) + lineWeightMin
+        } if self.VALUE in feature['properties'] else {
+          'color': 'black',
+          'weight': 1
         }
       }
     )

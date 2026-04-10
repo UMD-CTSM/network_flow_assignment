@@ -7,11 +7,12 @@ def global_weighted_efficiency(G):
     denom = n * (n - 1)
     if denom != 0:
         lengths = nx.all_pairs_dijkstra_path_length(G, weight='weight')
+        node_counts = dict(nx.all_pairs_shortest_path_length(G))
         g_eff = 0
         for source, targets in lengths:
-            for target, distance in targets.items():
-                if distance > 0:
-                    g_eff += 1 / distance
+            for target, weighted_distance in targets.items():
+                if weighted_distance > 0 and source != target:
+                    g_eff += 1 / weighted_distance
         g_eff /= denom
         # g_eff = sum(1 / d for s, tgts in lengths
         #                   for t, d in tgts.items() if d > 0) / denom
